@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSearch App</title>
+    <link rel="icon" href="images/Color logo with background.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="flex-container-header">
+                <a href="index.html"><img src="images/logo-no-bg.svg" alt="MovieSearch logo" class="logo-img"><a>
+
+                <form action="">
+                    <i class="icon-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for a movie">
+                    <button id="searchBtn">Search</button>
+                </form>
+
+                <a href="watchlist.html" class="flex">
+                <svg class="icon-nav" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="M111.152 1021.5V327q0-27.697 20.336-48.033 20.336-20.337 48.034-20.337h472.826q27.599 0 48.364 20.337 20.766 20.336 20.766 48.033v694.5L415.935 892.109 111.152 1021.5Zm68.37-103.435 236.413-101.804 236.413 101.804V327H179.522v591.065Zm600.956 2.435V198.63h-538.63V130.5h538.63q27.698 0 48.034 20.266 20.336 20.265 20.336 47.864V920.5h-68.37ZM179.522 327h472.826-472.826Z"/></svg>
+                <h2>Watchlist</h2></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-results" id="searchResults">
+            <div class="flex-column">
+                <svg width="70" height="62" viewBox="0 0 70 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0C3.91751 0 0 3.9175 0 8.75V52.5C0 57.3325 3.91751 61.25 8.75 61.25H61.25C66.0825 61.25 70 57.3325 70 52.5V8.75C70 3.9175 66.0825 0 61.25 0H8.75ZM21.875 8.75H48.125V26.25H21.875V8.75ZM56.875 43.75V52.5H61.25V43.75H56.875ZM48.125 35H21.875V52.5H48.125V35ZM56.875 35H61.25V26.25H56.875V35ZM61.25 17.5V8.75H56.875V17.5H61.25ZM13.125 8.75V17.5H8.75V8.75H13.125ZM13.125 26.25H8.75V35H13.125V26.25ZM8.75 43.75H13.125V52.5H8.75V43.75Z" fill="#DFDDDD"/></svg>
+                <p>Start exploring<p>
+            <div>
+        </section>  
+    </main>
+
+    <footer class="flex">
+        <p class="text-author">©2023 by Tomáš Lukeš</p>
+    </footer>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
