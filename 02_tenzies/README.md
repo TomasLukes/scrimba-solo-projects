@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".\images\logo-no-bg.svg" alt="Project Logo" width="150" />
+  <img src=".\src\assets\images\tenzies-logo-no-bg.png" alt="Project Logo" width="250" />
 </p>
 
 # Tenzies
