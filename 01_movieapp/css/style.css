@@ -1,8 +1,15 @@
-/* Basic CSS reset */
+/* ==========================================================================
+   Basic CSS reset
+   ========================================================================== */
+
 * {
-    margin: 0;
-    font: inherit;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    line-height: 1;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 img,
@@ -11,8 +18,10 @@ svg {
     max-width: 100%;
 }
 
+/* ==========================================================================
+   CSS custom properties
+   ========================================================================== */
 
-/* CSS custom properties */
 :root {
     --clr-primary-700: hsl(50, 100%, 47%);
     --clr-primary-900: hsl(0, 0%, 7%);
@@ -40,87 +49,95 @@ svg {
     --fs-900: 3rem;         /*48px*/
 }
 
-/* Layout */
-    body {
-        min-height: 100vh;
-        font-family: var(--font-family-default);
-        font-size: var(--fs-400);
-        font-weight: var(--fw-regular);
-    }
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 
-    .flex-container-header {  
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 3em;
-    }
+body {
+    font-family: var(--font-family-default);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    min-height: 100vh;
+}
 
-    .movie-description {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+.flex-container-header {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 3em;
+    width: 100%;
+}
 
-/* Utilities */
+.movie-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
 
 .flex {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 0.25em;
+}
+
+.flex-row {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+    padding-bottom: 1em;
+    width: 100%;
 }
 
 .flex-row-spaced {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1em;
     width: 90%;
-    padding-bottom: 1em;
-}
-
-.flex-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    width: 100%;
-    padding-bottom: 1em;
 }
 
 .flex-column {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
     gap: 0.5em;
     margin: auto 0;
 }
 
-/* Typography */
-.search-results {
-    min-height: calc(100vh - 160px);
-    padding: 5em 2em;
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+   .search-results {
+    align-content: start;
     color: var(--clr-neutral-900);
     display: grid;
+    gap: 2em;
     grid-template-columns: 1fr;
     justify-items: center;
-    align-content: start;
-    gap: 2em;
+    min-height: calc(100vh - 160px);
+    padding: 5em 2em;
 }
 
 a {
-    text-decoration: none;
     color: var(--clr-neutral-200);
+    text-decoration: none;
 }
 
 .text-add-movies {
     color: var(--clr-primary-900);
-    font-weight: var(--fw-bold)
+    font-weight: var(--fw-bold);
 }
 
 .text-movie-title {
-    max-width: 25ch;
     font-size: var(--fs-600);
     font-weight: var(--fw-bold);
+    max-width: 25ch;
 }
 
 .text-movie-plot {
@@ -130,9 +147,10 @@ a {
     max-width: 90%;
 }
 
-/* Color */
+/* ==========================================================================
+   Images & media
+   ========================================================================== */
 
-/* Images & media */
 .logo-img {
     flex-shrink: 0;
     min-width: 75px;
@@ -143,11 +161,11 @@ a {
     min-width: 50px;
 }
 
-.icon-search{
+.icon-search {
     background: url(../images/icon-search.svg) no-repeat center;
     height: 2rem;
-    width: 2rem;
     margin: 0.5em 0.5em;
+    width: 2rem;
 }
 
 .icon-nav {
@@ -156,14 +174,14 @@ a {
 }
 
 .icon-nav path {
-    fill: var(--clr-neutral-200)
+    fill: var(--clr-neutral-200);
 }
 
 .movie-poster {
-    max-height: 150px;
-    max-width: 100px;
     border-radius: 2.5px;
     margin-right: 2em;
+    max-height: 150px;
+    max-width: 100px;
 }
 
 svg, img {
@@ -172,102 +190,108 @@ svg, img {
 
 .icon-add-watchlist {
     flex-shrink: 0;
-    padding-left: 0.25em;
     min-width: 1.5rem;
+    padding-left: 0.25em;
 }
 
 .icon-add-watchlist:hover {
     cursor: pointer;
 }
 
-/* Components */
-    nav {
-        display: flex;
-        justify-content: center;
-        background-color: var(--clr-primary-900);
-        height: 100px;
-    }
+/* ==========================================================================
+   Components
+   ========================================================================== */
 
-    form {
-        width: 100%;
-        max-width: 700px;
-        min-width: 100px;
-        display: flex;
-        align-items: center;
-        background-color: var(--clr-neutral-100);
-        border-radius: 6px;
-        overflow: hidden;
-    }
+nav {
+    background-color: var(--clr-primary-900);
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
 
-    #searchInput {
-        width: 100%;
-        min-width: 150px;
-        border: none;
-    }
+form {
+    align-items: center;
+    background-color: var(--clr-neutral-100);
+    border-radius: 6px;
+    display: flex;
+    min-width: 100px;
+    max-width: 700px;
+    overflow: hidden;
+    width: 100%;
+}
 
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus, 
-    input:-webkit-autofill:active{
+#searchInput {
+    border: none;
+    min-width: 150px;
+    width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
-    }
+}
 
-    /*Change text in autofill textbox*/
-    input:-webkit-autofill{
+input:-webkit-autofill {
     -webkit-text-fill-color: hsla(221, 39%, 11%, 1) !important;
-    }
+}
 
-    input::placeholder {
-        background-color: var(--clr-neutral-100);
-        opacity: 1;
-      }
+input::placeholder {
+    background-color: var(--clr-neutral-100);
+    opacity: 1;
+}
 
-    input:focus {
-        outline: none;
-        border: none;
-        box-shadow: none;
-    }
+input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
 
-    #searchBtn {
-        font-size: 0.85rem;
-        background-color: var(--clr-neutral-300);
-        border: 1px solid #D1D5DB;
-        padding: 1em 3em;
-    }
+#searchBtn {
+    background-color: var(--clr-neutral-300);
+    border: 2px solid #D1D5DB;
+    font-size: 0.85rem;
+    padding: 1em 3em;
+    border-radius: 0 6px 6px 0;
+}
 
-    #searchBtn:hover {
-        cursor: pointer;
-        scale: 1.025;
-    }
+#searchBtn:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
 
-    .card-movie {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 600px;
-        max-width: 700px;
-        max-height: 225px;
-        padding-bottom: 1em;
-        border-bottom: 1.5px solid #E5E7EB;
-    }
+.card-movie {
+    align-items: center;
+    border-bottom: 1.5px solid #E5E7EB;
+    display: flex;
+    justify-content: center;
+    max-height: 225px;
+    max-width: 700px;
+    min-width: 600px;
+    padding-bottom: 1em;
+}
 
-    #addToListBtn {
-        border: none;
-        background: none;
-        padding: 0;
-    }
+#addToListBtn {
+    background: none;
+    border: none;
+    padding: 0;
+}
 
-    footer {
-        display: flex;
-        height: 60px;
-        align-content: center;
-        justify-content: center;
-        background-color: var(--clr-primary-900);
-        color: var(--clr-neutral-200);
-    }
+footer {
+    align-content: center;
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-200);
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
 
-/* Media query for desktop */
-@media (max-width: 768px) {
+/* ==========================================================================
+   Media queries for responsive design
+   ========================================================================== */
+
+   @media (max-width: 768px) {
     body {
         min-height: 100vh;
     }
@@ -277,14 +301,14 @@ svg, img {
     }
 
     .flex-container-header {
-        justify-content: flex-end;
         align-items: center;
         flex-wrap: wrap-reverse;
         gap: 0.5rem;
-        width: 100%;
+        justify-content: flex-end;
         height: fit-content;
         margin: auto 0;
         padding: 0 1.5em;
+        width: 100%;
     }
 
     .flex-space-between {
@@ -292,8 +316,8 @@ svg, img {
     }
 
     .logo-img-watchlist {
-        max-width: 90px;
         margin-right: 100%;
+        max-width: 90px;
     }
 
     h2 {
@@ -302,14 +326,14 @@ svg, img {
 
     .card-movie {
         align-items: start;
-        min-width: 300px;
         max-height: 500px;
+        min-width: 300px;
     }
 
     .text-movie-title {
-        width: 12rem;
         font-size: var(--fs-500);
         font-weight: var(--fw-bold);
+        width: 12rem;
     }
 
     .label-add-watchlist {
@@ -318,11 +342,12 @@ svg, img {
 
     #searchBtn {
         padding: 0.6em 1.8em;
+        overflow: hidden;
     }
 
     .icon-search {
-        padding: 0 0.5rem;
         margin: 0 0.5rem;
+        padding: 0 0.5rem;
     }
 
     .movie-description {
@@ -330,12 +355,12 @@ svg, img {
     }
 
     .search-results {
-        padding: 1.5em 1em;
+        align-content: start;
         color: var(--clr-neutral-900);
         display: grid;
+        gap: 2em;
         grid-template-columns: 1fr;
         justify-items: center;
-        align-content: start;
-        gap: 2em;
+        padding: 1.5em 1em;
     }
 }
