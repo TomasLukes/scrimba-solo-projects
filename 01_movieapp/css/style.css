@@ -313,7 +313,7 @@ footer {
     }
 
     .container-header-grid {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         margin: 1rem 0;
         grid-template-columns: 1fr minmax(100px, 150px) 1fr;
         grid-template-rows: 1fr 1fr;
