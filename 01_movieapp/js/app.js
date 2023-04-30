@@ -138,7 +138,7 @@ export async function fetchWatchlist(myWatchlist) {
           searchResultsContainer.innerHTML = `            
           <div class="flex-column">
             <p>Your watchlist is looking a little empty...</p>
-            <a class="text-add-movies flex" href="index.html">
+            <a class="text-add-movies flex" href="../index.html">
               <img src="../images/icon-add.svg" alt="Add to watchlist button">
               <p>Let’s add some movies!</p>
             </a>
