@@ -1,4 +1,4 @@
-import { handleClick} from './app.js';
+import { handleClick } from './app.js';
               
 // Add event listeners
 document.addEventListener('click', handleClick);

@@ -1,11 +1,13 @@
-
 // Shared variables
 export const apiKey = `apikey=b9b3f97a`                                        
 export const myWatchlist = JSON.parse(localStorage.getItem('myWatchlist'))     
 export const searchResultsContainer = document.getElementById('searchResults');
-export let htmlFeed = ``;
-                                                        
-// Shared functions
+export let moviesHtmlFeed = ``;
+      
+// Shared functions:
+
+// 01. Event handling:
+// Handle all click events for app
 export function handleClick(e) {
   if (e.target.id === 'searchBtn') {
     searchMovies(e);
@@ -22,10 +24,34 @@ export function handleClick(e) {
   }
 }
 
+// Add a movie to watchlist using its ID
+export function addToWatchlist(id) {
+  let moviesArray = myWatchlist || [];
+
+  if (!moviesArray.includes(id)) {
+    moviesArray.push(id);
+  }
+
+  localStorage.setItem('myWatchlist', JSON.stringify(moviesArray));
+}
+
+// Remove a movie to watchlist using its ID
+export function removeFromWatchlist (id) {
+  const movieIndex = myWatchlist.indexOf(id);
+  myWatchlist.splice(movieIndex, 1);
+  localStorage.setItem('myWatchlist', JSON.stringify(myWatchlist))
+
+  if (window.isWatchlist) {
+    fetchWatchlist(myWatchlist);
+  }
+}
+
+// 02. Rendering:
+// Generate the HTML feed for list of movies
 export function getFeed(movies, iconType) {
-  htmlFeed = '';
+  moviesHtmlFeed = '';
   for(let movie of movies) {
-    htmlFeed += `          
+    moviesHtmlFeed += `          
       <div class='card-movie'>
 
         <img src="${movie.Poster}" alt="" class="movie-poster">
@@ -61,30 +87,13 @@ export function getFeed(movies, iconType) {
   }
 }
 
+// Render the movies feed in the searchResults container
 export function render(feed) {
   searchResultsContainer.innerHTML = feed;
 }
 
-export function addToWatchlist(id) {
-  let moviesArray = myWatchlist || [];
-
-  if (!moviesArray.includes(id)) {
-    moviesArray.push(id);
-  }
-
-  localStorage.setItem('myWatchlist', JSON.stringify(moviesArray));
-}
-
-export function removeFromWatchlist (id) {
-  const movieIndex = myWatchlist.indexOf(id);
-  myWatchlist.splice(movieIndex, 1);
-  localStorage.setItem('myWatchlist', JSON.stringify(myWatchlist))
-
-  if (window.isWatchlist) {
-    fetchWatchlist(myWatchlist);
-  }
-}
-
+// 03. Data fetching:
+// Search for movies based on the users input
 export async function searchMovies(e) {
   e.preventDefault();
 
@@ -105,13 +114,14 @@ export async function searchMovies(e) {
 
     const addIcon = "add";
     getFeed(detailedMovies, addIcon);
-    render(htmlFeed);
+    render(moviesHtmlFeed);
     }
   } catch(error) {
     console.log(error);
   }
 };
 
+// Fetch the movies from the users watchlist
 export async function fetchWatchlist(myWatchlist) {
   try {
       if (myWatchlist.length) {
@@ -123,7 +133,7 @@ export async function fetchWatchlist(myWatchlist) {
 
       const removeIcon = "remove";
       getFeed(savedMovies, removeIcon);
-      render(htmlFeed);
+      render(moviesHtmlFeed);
       } else {
           searchResultsContainer.innerHTML = `            
           <div class="flex-column">
