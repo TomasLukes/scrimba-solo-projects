@@ -60,14 +60,31 @@ body {
     min-height: 100vh;
 }
 
-.flex-container-header {
+.container-header-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(600px, 700px) 1fr;
     align-items: center;
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    max-width: 1000px;
     padding: 0 3em;
+}
+
+.container-header-flex {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
     width: 100%;
+    min-width: 600px;
+    max-width: 700px;
+    padding: 0 3em;
+}
+
+
+.watchlist-flex {
+    justify-self: flex-end;
 }
 
 .movie-description {
@@ -205,24 +222,23 @@ svg, img {
 nav {
     background-color: var(--clr-primary-900);
     display: flex;
-    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
     justify-content: center;
 }
 
 form {
+    display: flex;
     align-items: center;
     background-color: var(--clr-neutral-100);
     border-radius: 6px;
-    display: flex;
-    min-width: 100px;
     max-width: 700px;
-    overflow: hidden;
+    min-width: 600px;
     width: 100%;
 }
 
 #searchInput {
     border: none;
-    min-width: 150px;
     width: 100%;
 }
 
@@ -296,32 +312,38 @@ footer {
         min-height: 100vh;
     }
 
-    .logo-img {
+    .container-header-grid {
+        margin: 1rem 0;
+        grid-template-columns: 1fr minmax(100px, 150px) 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "logo . link"
+            "form form form";
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .container-header-flex {
+        min-width: 100px;
+    }
+
+    .header-text-search {
         display: none;
     }
 
-    .flex-container-header {
-        align-items: center;
-        flex-wrap: wrap-reverse;
-        gap: 0.5rem;
-        justify-content: flex-end;
-        height: fit-content;
-        margin: auto 0;
-        padding: 0 1.5em;
+    form {
+        min-width: 100px;
         width: 100%;
+        grid-area: form;  
     }
 
-    .flex-space-between {
-        justify-content: space-between;
+    .watchlist-flex {
+        grid-area: link; 
     }
 
     .logo-img-watchlist {
         margin-right: 100%;
         max-width: 90px;
-    }
-
-    h2 {
-        display: none;
     }
 
     .card-movie {
@@ -336,13 +358,8 @@ footer {
         width: 12rem;
     }
 
-    .label-add-watchlist {
-        display: none;
-    }
-
     #searchBtn {
         padding: 0.6em 1.8em;
-        overflow: hidden;
     }
 
     .icon-search {
