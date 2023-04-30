@@ -13,11 +13,11 @@ export function handleClick(e) {
   
   if (e.target.dataset.id && e.target.dataset.button ==='add') {
     addToWatchlist(e.target.dataset.id);
-    e.target.src = 'images/icon-remove.svg';
+    e.target.src = '../images/icon-remove.svg';
     e.target.dataset.button = 'remove';
   } else if (e.target.dataset.id && e.target.dataset.button === 'remove') {
     removeFromWatchlist(e.target.dataset.id);
-    e.target.src = 'images/icon-add.svg';
+    e.target.src = '../images/icon-add.svg';
     e.target.dataset.button = 'add';
   }
 }
@@ -49,7 +49,7 @@ export function getFeed(movies, iconType) {
 
             <div class='flex'>
               <button id="addToListBtn" data-title='${movie.Title}' data-id='${movie.imdbID}'>
-                <img src='images/icon-${iconType}.svg' alt="Add to watchlist button" data-id='${movie.imdbID}' class='icon-add-watchlist' data-button='${iconType}'>
+                <img src='../images/icon-${iconType}.svg' alt="Add to watchlist button" data-id='${movie.imdbID}' class='icon-add-watchlist' data-button='${iconType}'>
               </button>
               <label class='label-add-watchlist'>Watchlist</label>
             </div>
@@ -129,7 +129,7 @@ export async function fetchWatchlist(myWatchlist) {
           <div class="flex-column">
             <p>Your watchlist is looking a little empty...</p>
             <a class="text-add-movies flex" href="index.html">
-              <img src="images/icon-add.svg" alt="Add to watchlist button">
+              <img src="../images/icon-add.svg" alt="Add to watchlist button">
               <p>Let’s add some movies!</p>
             </a>
           </div>`

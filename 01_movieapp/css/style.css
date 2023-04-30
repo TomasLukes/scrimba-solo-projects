@@ -144,7 +144,7 @@ a {
 }
 
 .icon-search{
-    background: url(images/icon-search.svg) no-repeat center;
+    background: url(../images/icon-search.svg) no-repeat center;
     height: 2rem;
     width: 2rem;
     margin: 0.5em 0.5em;
