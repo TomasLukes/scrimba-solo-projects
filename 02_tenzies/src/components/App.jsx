@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
 import Die from './Die'
+import Logo from './Logo'
 
 export default function App() {
   const [dice, setDice] = useState(allNewDice())
@@ -64,9 +65,14 @@ export default function App() {
   return (
     <main className="App">
       {tenzies && <Confetti />}
-      <div className='description'>
-        <h1 className="description__title no-margin">Tenzies</h1>
-        <p className="description__text">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      <div className='heading'>
+        <Logo />
+        <div className='heading__description'>
+          <p className="heading__description-text no-margin">
+            Tenzies is a simple game: roll and hold dice to get all of them showing the same number. 
+            Click a die to hold its value and continue rolling until you win!
+          </p>
+        </div>
       </div>
       <div className='dice'>
         {dieElements}

@@ -24,8 +24,8 @@ body {
 
 main {
     background-color:#F5F5F5;
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -35,17 +35,25 @@ main {
 
 
 /* Heading */
-.description {
-    text-align: center;
-    padding: 0 2em;
+.heading {
+    display: grid;
+    gap: 1rem;
+    max-width: 378px;
 }
 
-.description__title {
+.logo__img {
+    width: 250px;
+}
+
+.heading__description {
 
 }
 
-.description__text {
-    width: 40ch;
+.heading__description-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: justify;
 }
 
 
@@ -53,6 +61,7 @@ main {
 .dice {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    max-width: 378px;
     gap: 2em;
 }
 
