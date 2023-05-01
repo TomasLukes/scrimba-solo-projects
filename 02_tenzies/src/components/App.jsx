@@ -125,7 +125,9 @@ export default function App() {
         <div className='dice'>
           {dieElements}
         </div>
-        <button className='button' onClick={rollDice}>{tenzies ? 'New game' : 'Roll'}</button>
+        <button className='button' onClick={rollDice}>
+          {tenzies ? 'New game' : 
+            timeIsRunning ? 'Roll' : `Start`}</button>
       </div>
     </main>
   )

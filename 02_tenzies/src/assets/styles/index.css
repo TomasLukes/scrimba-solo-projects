@@ -61,8 +61,8 @@ body {
 
 .heading__info-icon {
     cursor: help;
-    width: 20px;
-    padding: 0 0 0.5rem 0.25rem;
+    width: 25px;
+    padding: 0 0 0.25rem 0.25rem;
 }
 
 .heading__description-text {
@@ -77,6 +77,15 @@ body {
 /* Record */
 .record {
     width: 378px;
+}
+
+.record__text {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.record__seconds {
+    font-weight: 700;
 }
 
 /* Dices */
