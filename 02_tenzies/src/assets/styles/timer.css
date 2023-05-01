@@ -6,10 +6,10 @@
     color: #0B2434;
     border-radius: 50%;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     text-shadow: 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125);
-    width: 10vmin;
-    height: 10vmin;
-    box-shadow: 0 0 0 1.25vmin, inset 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125), 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125);
+    width: 7.5vmin;
+    height: 7.5vmin;
+    box-shadow: 0 0 0 1vmin;
 }
   

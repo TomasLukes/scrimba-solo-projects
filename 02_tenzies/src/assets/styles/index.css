@@ -11,6 +11,10 @@
     margin: 0;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
 
 /* Layout */
 body {
@@ -26,6 +30,7 @@ body {
     background-color:#F5F5F5;
     width: 500px;
     height: 500px;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -36,33 +41,43 @@ body {
 
 
 /* Heading */
-.heading {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    max-width: 500px;
-    padding: 1rem 2rem;
+
+.logo__container {
 }
 
 .logo__img {
-    width: 150px;
+    display: block;
+    margin: 0.5rem auto;
+    width: 200px;
 }
 
 .heading__description {
-    color: #F5F5F5;
 }
 
 .heading__description-title {
-    
+    display: inline;
     text-align: center;
 }
 
-.heading__description-text {
-    font-size: 1rem;
-    line-height: 1.3;
-    text-align: justify;
+.heading__info-icon {
+    cursor: help;
+    width: 20px;
+    padding: 0 0 0.5rem 0.25rem;
 }
 
+.heading__description-text {
+    display: none;
+    font-size: 1rem;
+    text-align: justify;
+    width: 250px;
+    margin: 0 auto;
+}
+
+
+/* Record */
+.record {
+    width: 378px;
+}
 
 /* Dices */
 .dice {
