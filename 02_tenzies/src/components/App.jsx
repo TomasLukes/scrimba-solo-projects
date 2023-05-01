@@ -3,6 +3,7 @@ import Confetti from 'react-confetti'
 import Die from './Die'
 import Logo from './Logo'
 import Record from './Record'
+import Timer from './Timer'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
@@ -33,7 +34,7 @@ export default function App() {
       if (timeIsRunning) {
         interval = setInterval(() => {
           setTime((prevTime) => prevTime +1)
-        }, 10)
+        }, 1000)
       } else {
         clearInterval(interval)
       }
@@ -105,14 +106,18 @@ export default function App() {
       {tenzies && <Confetti />}
       <div className='heading'>
         <Logo />
-        <div className='heading__description'>
-          <p className="heading__description-text no-margin">
-            Tenzies is a simple game: roll and hold dice to get all of them showing the same number. 
-            Click a die to hold its value and continue rolling until you win!
-          </p>
-        </div>
+        {!timeIsRunning &&
+          <div className='heading__description'>
+            <p className="heading__description-text no-margin">
+              Tenzies is a simple game: roll and hold dice to get all of them showing the same number. 
+              Click a die to hold its value and continue rolling until you win!
+            </p>
+          </div>
+        }
       </div>
-      <Record bestRecord={bestRecord} />
+
+      {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
+      
       <div className='dice'>
         {dieElements}
       </div>
