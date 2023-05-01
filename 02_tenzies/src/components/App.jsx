@@ -107,24 +107,26 @@ export default function App() {
   return (
     <main className="App">
       {tenzies && <Confetti />}
+      <h2 className='heading__description-title no-margin'>Welcome to Tenzies! </h2>
       <div className='heading'>
         <Logo />
         {!timeIsRunning &&
           <div className='heading__description'>
             <p className="heading__description-text no-margin">
-              Tenzies is a simple game: roll and hold dice to get all of them showing the same number. 
-              Click a die to hold its value and continue rolling until you win!
+              Roll, hold, and match dice numbers. Click to hold a die, keep rolling to win!
             </p>
           </div>
         }
       </div>
-
-      {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
       
-      <div className='dice'>
-        {dieElements}
+      <div className='game__container'>
+        {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
+        
+        <div className='dice'>
+          {dieElements}
+        </div>
+        <button className='button' onClick={rollDice}>{tenzies ? 'New game' : 'Roll'}</button>
       </div>
-      <button className='button' onClick={rollDice}>{tenzies ? 'New game' : 'Roll'}</button>
     </main>
   )
 }
