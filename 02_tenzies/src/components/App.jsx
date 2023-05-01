@@ -65,14 +65,14 @@ if (tenzies) {
   return (
     <main className="App">
       {tenzies && <Confetti />}
-      <div className='container-description'>
-        <h1 className="title">Tenzies</h1>
-        <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      <div className='description'>
+        <h1 className="description__title no-margin">Tenzies</h1>
+        <p className=".description__text">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       </div>
-      <div className='container-dice'>
+      <div className='dice'>
         {dieElements}
       </div>
-      <button onClick={rollDice}>{tenzies ? 'New game' : 'Roll'}</button>
+      <button className='button' onClick={rollDice}>{tenzies ? 'New game' : 'Roll'}</button>
     </main>
   )
 }

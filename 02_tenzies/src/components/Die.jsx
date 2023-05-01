@@ -1,8 +1,8 @@
 export default function Die(props) {
 
   return (
-    <div className={`die-box ${props.isHeld && 'isHeld'}`} onClick={props.holdDice}>
-      <h2>{props.value}</h2>
+    <div className={`die ${props.isHeld && 'die--isHeld'}`} onClick={props.holdDice}>
+      <h2 className="die__value no-margin">{props.value}</h2>
     </div>
   )
 }
