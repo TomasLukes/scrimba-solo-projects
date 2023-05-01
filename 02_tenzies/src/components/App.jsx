@@ -20,14 +20,13 @@ export default function App() {
     if (allHeld && allSameValue) {
       setTenzies(true)
       setTimeIsRunning(false)
-      
-        if (time > 0 && time < bestRecord) {
-          setBestRecord(time)
-          saveBestRecord(time)
-        }
 
+      if (time > 0 && (bestRecord === 0 || time < bestRecord)) {
+        setBestRecord(time);
+        saveBestRecord(time);
       }
-  }, [dice])
+    }
+  }, [dice, time, bestRecord])
 
   useEffect(() => {
       let interval;
@@ -41,8 +40,9 @@ export default function App() {
       return () => clearInterval(interval);
     }, [timeIsRunning]);
 
-  function saveBestRecord(time) {
-    localStorage.setItem('bestRecord', JSON.stringify(time))
+
+    function saveBestRecord(time) {
+      localStorage.setItem('bestRecord', JSON.stringify(time))
   }
 
   function loadBestRecord() {
