@@ -6,6 +6,8 @@ import Record from './Record'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
+  const [time, setTime] = useState(0)
+  const [timeIsRunning, setTimeIsRunning] = useState(false) 
   const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
 
@@ -16,9 +18,27 @@ export default function App() {
     const allSameValue = dice.every(die => die.value === firstValue)
     if (allHeld && allSameValue) {
       setTenzies(true)
-      console.log('You won')
+      setTimeIsRunning(false)
+      
+        if (time > 0 && time < bestRecord) {
+          setBestRecord(time)
+          saveBestRecord(time)
+        }
+
       }
   }, [dice])
+
+  useEffect(() => {
+      let interval;
+      if (timeIsRunning) {
+        interval = setInterval(() => {
+          setTime((prevTime) => prevTime +1)
+        }, 10)
+      } else {
+        clearInterval(interval)
+      }
+      return () => clearInterval(interval);
+    }, [timeIsRunning]);
 
   function saveBestRecord(time) {
     localStorage.setItem('bestRecord', JSON.stringify(time))
@@ -46,7 +66,9 @@ export default function App() {
     if (tenzies) {
       setDice(allNewDice)
       setTenzies(false)
+      setTime(0)
     } else {
+      setTimeIsRunning(true)
       setDice(oldDice => oldDice.map(die => {
         return die.isHeld ? 
           die : generateNewDie(die.id)
