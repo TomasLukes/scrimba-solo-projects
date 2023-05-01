@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
 import Die from './Die'
 import Logo from './Logo'
+import Record from './Record'
 
 export default function App() {
   const [dice, setDice] = useState(allNewDice())
@@ -74,6 +75,7 @@ export default function App() {
           </p>
         </div>
       </div>
+      <Record />
       <div className='dice'>
         {dieElements}
       </div>
