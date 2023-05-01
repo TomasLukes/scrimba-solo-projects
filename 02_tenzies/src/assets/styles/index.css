@@ -15,7 +15,7 @@
 /* Layout */
 body {
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #0B2434;
     display: grid;
     place-items: center;

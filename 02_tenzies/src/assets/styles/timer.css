@@ -1,0 +1,19 @@
+.count-up-timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 25vmin;
+    text-shadow: 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125);
+    width: 50vmin;
+    height: 50vmin;
+    box-shadow: 0 0 0 1.25vmin, inset 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125), 2.5vmin 2.5vmin 5vmin rgba(0, 0, 0, 0.125);
+}
+  
