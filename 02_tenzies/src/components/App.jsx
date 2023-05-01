@@ -85,17 +85,20 @@ export default function App() {
   }
 
   function holdDice(id) {
-    setDice(oldDice => oldDice.map(die => {
-      return die.id === id ?
-        {...die, isHeld: !die.isHeld} : 
-        die
-    }))
+    if (timeIsRunning) {
+      setDice(oldDice => oldDice.map(die => {
+        return die.id === id ?
+          {...die, isHeld: !die.isHeld} : 
+          die
+      }))
+    }
   }
 
   const dieElements = dice.map(num => 
     <Die 
       key={num.id}
       value={num.value}
+      timeIsRunning={timeIsRunning}
       isHeld={num.isHeld}
       holdDice={() => holdDice(num.id)}
     />
