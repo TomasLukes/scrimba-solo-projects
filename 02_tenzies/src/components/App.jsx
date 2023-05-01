@@ -6,6 +6,7 @@ export default function App() {
   const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
 
+  // Check if all dice have the same value and are also held
   useEffect(() => {
     const allHeld = dice.every(die => die.isHeld)
     const firstValue = dice[0].value
@@ -14,29 +15,26 @@ export default function App() {
       setTenzies(true)
       console.log('You won')
       }
-    }, [dice])
+  }, [dice])
 
-
-function generateNewDie(id) {
-  return {
-    id: id, 
-    value: Math.ceil(Math.random() * 6), 
-    isHeld: false
+  function generateNewDie(id) {
+    return {
+      id: id, 
+      value: Math.ceil(Math.random() * 6), 
+      isHeld: false
     }
-}
+  }
 
-function rollDice() {
-
-if (tenzies) {
-  setDice(allNewDice)
-  setTenzies(false)
-} else {
-  setDice(oldDice => oldDice.map(die => {
-    return die.isHeld ? 
-      die : generateNewDie(die.id)
-  }))
-}
-}
+  function rollDice() {
+    if (tenzies) {
+      setDice(allNewDice)
+      setTenzies(false)
+    } else {
+      setDice(oldDice => oldDice.map(die => {
+        return die.isHeld ? 
+          die : generateNewDie(die.id)
+    }))}
+  }
 
   function allNewDice() {
     let diceArray = []
@@ -60,14 +58,15 @@ if (tenzies) {
       value={num.value}
       isHeld={num.isHeld}
       holdDice={() => holdDice(num.id)}
-    />)
+    />
+  )
  
   return (
     <main className="App">
       {tenzies && <Confetti />}
       <div className='description'>
         <h1 className="description__title no-margin">Tenzies</h1>
-        <p className=".description__text">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+        <p className="description__text">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       </div>
       <div className='dice'>
         {dieElements}
@@ -76,4 +75,3 @@ if (tenzies) {
     </main>
   )
 }
-
