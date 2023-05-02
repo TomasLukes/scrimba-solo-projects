@@ -43,12 +43,14 @@ body {
 /* Heading */
 
 .logo__container {
+    position: relative;
 }
 
 .logo__img {
     display: block;
     margin: 0.5rem auto;
-    width: 200px;
+    width: 250px;
+    padding: 0 1.25rem;
 }
 
 .heading__description {
@@ -60,9 +62,33 @@ body {
 }
 
 .heading__info-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
     cursor: help;
-    width: 25px;
-    padding: 0 0 0.25rem 0.25rem;
+    width: 20px;
+    height: 20px;
+}
+
+.info-icon__tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #59E391;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.logo__tooltip:hover .info-icon__tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 .heading__description-text {
