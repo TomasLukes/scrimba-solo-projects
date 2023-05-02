@@ -7,9 +7,10 @@ import Timer from './Timer'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
+  const [recordBeaten, setRecordBeaten] = useState(false)
   const [time, setTime] = useState(0)
   const [timeIsRunning, setTimeIsRunning] = useState(false) 
-  const [dice, setDice] = useState(allNewDice())
+  const [dice, setDice] = useState(() => allNewDice())
   const [tenzies, setTenzies] = useState(false)
 
   // Check if all dice have the same value and are also held, when dice state is changed
@@ -22,6 +23,7 @@ export default function App() {
       setTimeIsRunning(false)
 
       if (time > 0 && (bestRecord === 0 || time < bestRecord)) {
+        setRecordBeaten(true);
         setBestRecord(time);
         saveBestRecord(time);
       }
@@ -65,15 +67,18 @@ export default function App() {
 
   function rollDice() {
     if (tenzies) {
-      setDice(allNewDice)
-      setTenzies(false)
-      setTime(0)
+      setRecordBeaten(false);
+      setDice(allNewDice());
+      setTenzies(false);
+      setTime(0);
     } else {
-      setTimeIsRunning(true)
-      setDice(oldDice => oldDice.map(die => {
-        return die.isHeld ? 
-          die : generateNewDie(die.id)
-    }))}
+      setTimeIsRunning(true);
+      setDice((oldDice) =>
+        oldDice.map((die) => {
+          return die.isHeld ? die : generateNewDie(die.id);
+        })
+      );
+    }
   }
 
   function allNewDice() {
@@ -106,16 +111,14 @@ export default function App() {
  
   return (
     <main className="App">
-      {tenzies && <Confetti />}
+      {tenzies && recordBeaten && <Confetti />}
+
       <div className='game__container'>
         {!timeIsRunning &&
           <div className='heading__description'>
-                <div className='flex'>
-                  <h2 className='heading__description-title no-margin'>Welcome to <Logo /></h2>
-                </div>
-            <p className="heading__description-text no-margin">
-              Roll, hold, and match dice numbers. Click to hold a die, keep rolling to win!
-            </p>
+              <div className='flex'>
+                <h2 className='heading__description-title no-margin'>Welcome to <Logo /></h2>
+              </div>
           </div>
         }
 

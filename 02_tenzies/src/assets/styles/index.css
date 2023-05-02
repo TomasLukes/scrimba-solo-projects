@@ -72,7 +72,7 @@ body {
 
 .info-icon__tooltiptext {
     visibility: hidden;
-    width: 210px;
+    width: 250px;
     font-size: 0.925rem;
     font-weight: 600;
     background-color: #59E391;
@@ -99,6 +99,39 @@ body {
     margin: 0 auto;
 }
 
+/* Timer */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer__logo-img {
+    width: 200px;
+}
+
+.timer__text {
+    padding: 0;
+    margin: 2rem 0 1rem 0;
+}
+
+.count-up-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #0B2434;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 2.5vmin 2.5vmin 5vmin #59E391;
+    width: 7vmin;
+    height: 7vmin;
+    box-shadow: 0 0 0 1vmin;
+    margin-bottom: 2rem;
+}
+  
 
 /* Record */
 .record {
