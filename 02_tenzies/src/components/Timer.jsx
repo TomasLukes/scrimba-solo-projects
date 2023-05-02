@@ -2,9 +2,13 @@ import '../assets/styles/timer.css';
 
 export default function Timer({ time }) {
   return (
+    <>
+    <h2>Current time:</h2>
+
     <div className="count-up-timer" style={{ '--display-time': time }}>
       {time}
     </div>
+    </>
   );
 }
 

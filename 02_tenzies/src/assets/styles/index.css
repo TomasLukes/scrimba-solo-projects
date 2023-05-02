@@ -72,11 +72,11 @@ body {
 
 .info-icon__tooltiptext {
     visibility: hidden;
-    width: 160px;
-    font-size: 1rem;
+    width: 210px;
+    font-size: 0.925rem;
     font-weight: 600;
     background-color: #59E391;
-    text-align: center;
+    text-align: left;
     border-radius: 6px;
     padding: 5px;
     position: absolute;
