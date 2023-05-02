@@ -1,6 +1,8 @@
 /* CSS Reset */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -20,9 +22,11 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: #0B2434;
+    width: 100%;
     display: grid;
-    place-items: center;
+    place-content: center;
+    overflow: hidden;
+    background-color: #0B2434;
     font-family: 'Karla', sans-serif;
 }
 
@@ -30,6 +34,7 @@ body {
     background-color:#F5F5F5;
     width: 500px;
     height: 500px;
+    margin: 0 auto;
     padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
@@ -151,8 +156,9 @@ body {
 .dice {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    max-width: 378px;
-    gap: 2em;
+    width: 100%;
+    gap: 1.75em;
+    padding: 0 2rem;
 }
 
 
@@ -206,4 +212,58 @@ body {
 
 .button:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+
+    .game__container {
+        height: 500px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .game__container {
+        max-width: 400px;
+    }
+
+    .dice {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .die {
+        width: 45px;
+        max-height: 45px;
+
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .game__container {
+        height: 450px;
+        max-width: 350px;
+    }
+
+    .dice {
+        gap: 1.25rem;
+    }
+
+    .die {
+        font-size: 0.9rem;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .game__container {
+        height: 450px;
+        max-width: 320px;
+    }
 }
