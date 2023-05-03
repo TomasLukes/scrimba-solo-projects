@@ -27,15 +27,17 @@ Tenzies is my first React app from the Scrimba course that I wanted to share. It
 
 ## Screenshots
 
-![Screenshot 1](path/to/screenshot-1.png)
+<p align="center">
+  <img src="./src/assets/images/screenshots/tenzies-screenshot-desktop.PNG" alt="Screenshot of page displayed on desktop" width="500" />
+</p>
 
-_Description of screenshot 1_
+Desktop
 
-![Screenshot 2](path/to/screenshot-2.png)
+<p align="center">
+  <img src="./src/assets/images/screenshots/tenzies-screenshot-mobile.PNG"  alt="Screenshot of page displayed on mobile" width="250" />
+</p>
 
-_Description of screenshot 2_
-
-<!-- Add more screenshots if necessary -->
+Mobile
 
 ## What I Learned
 
