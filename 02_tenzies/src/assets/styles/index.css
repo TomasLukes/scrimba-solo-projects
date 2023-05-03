@@ -130,10 +130,10 @@ body {
     border-radius: 50%;
     font-weight: 700;
     font-size: 2.5rem;
-    text-shadow: 2.5vmin 2.5vmin 5vmin #59E391;
-    width: 7vmin;
-    height: 7vmin;
-    box-shadow: 0 0 0 1vmin;
+    text-shadow: 2.5rem 2.5rem 5rem #59E391;
+    width: 4.25rem;
+    height: 4.25rem;
+    box-shadow: 0 0 0 0.5rem;
     margin-bottom: 2rem;
 }
   
@@ -198,7 +198,7 @@ body {
     font-weight: 700;
     color: white;
 
-    padding: 1em 2em;
+    padding: 1.25rem 3rem;
     border: none;
     background: #5035FF;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.18);
@@ -215,18 +215,67 @@ body {
 }
 
 /* Media queries */
+@media (max-width: 790px) {
+    .info-icon__tooltiptext {
+        width: 170px;
+    }
+}
 
 @media (max-width: 600px) {
-
     .game__container {
         height: 500px;
         max-width: 450px;
+    }
+
+    .logo__img {
+        width: 225px;
+    }
+
+    .info-icon__tooltiptext {
+        font-size: 0.9rem;
+        width: 130px;
+    }
+
+    .timer__logo-img {
+        width: 175px;
+    }
+
+    .timer__text {
+        font-size: 1.35rem;
+    }
+
+    .count-up-timer {
+        font-size: 2.25rem;
+        width: 4rem;
+        height: 4rem;
+        box-shadow: 0 0 0 0.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
 @media (max-width: 500px) {
     .game__container {
         max-width: 400px;
+    }
+
+    .logo__img {
+        width: 200px;
+    }
+
+    .info-icon__tooltiptext {
+        width: 110px;
+    }
+
+    .timer__logo-img {
+        width: 150px;
+    }
+
+    .count-up-timer {
+        font-size: 2rem;
+        width: 3.75rem;
+        height: 3.75rem;
+        box-shadow: 0 0 0 0.5rem;
+        margin-bottom: 1.25rem;
     }
 
     .dice {
@@ -241,12 +290,22 @@ body {
         border-radius: 5px;
         font-size: 1rem;
     }
+
+    .button {
+        font-size: 1.125rem;
+        padding: 1.125rem 2.6rem;
+    }
 }
 
 @media (max-width: 425px) {
     .game__container {
         height: 450px;
         max-width: 350px;
+    }
+
+    .info-icon__tooltiptext {
+        font-size: 0.8125;
+        width: 75px;
     }
 
     .dice {
@@ -259,6 +318,11 @@ body {
         height: 40px;
     }
 
+    .button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -266,4 +330,21 @@ body {
         height: 450px;
         max-width: 320px;
     }
+
+    .info-icon__tooltiptext {
+        width: 75px;
+    }
+
+    .timer__text {
+        font-size: 1.25rem;
+    }
+
+    .count-up-timer {
+        font-size: 1.75rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        box-shadow: 0 0 0 0.4rem;
+        margin-bottom: 1.25rem;
+    }
+
 }
