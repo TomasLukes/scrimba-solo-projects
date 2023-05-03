@@ -48,9 +48,9 @@ Throughout this project, I gained a deeper understanding of various concepts, su
 ## Future Improvements
 
 I plan to create a React version of this app to compare the development process with and without a framework. Additionally, I intend to enhance the vanilla version by:
-- ~~Refactoring the code and improving the file structure~~
-- ~~Polishing the page's styling~~
-- ~~Optimizing the user experience across various devices, particularly for mobile users~~
+- ✅ Refactoring the code and improving the file structure
+- ✅ Polishing the page's styling
+- ✅ Optimizing the user experience across various devices, particularly for mobile users
 
 ## Last update:
 
