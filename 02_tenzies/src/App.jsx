@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
 import Die from './components/Die'
-import Logo from './components/Logo'
+import GameHeader from './components/GameHeader'
 import Record from './components/Record'
 import Timer from './components/Timer'
 import Result from './components/Result'
+import PlayButton from './components/PlayButton'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
@@ -115,13 +116,10 @@ export default function App() {
       {tenzies && recordBeaten && <Confetti />}
 
       <div className='game__container'>
-        {!timeIsRunning &&
-          <div className='heading__description'>
-              <div className='flex'>
-                <h2 className='heading__description-title no-margin'>Welcome to <Logo /></h2>
-              </div>
-          </div>
-        }
+
+        {!timeIsRunning && <GameHeader/>}
+
+
         
         {tenzies && <Result recordBeaten={recordBeaten} /> }
         {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
@@ -129,9 +127,7 @@ export default function App() {
         <div className='dice'>
           {dieElements}
         </div>
-        <button className='button' onClick={rollDice}>
-          {tenzies ? 'New game' : 
-            timeIsRunning ? 'Roll' : `Start`}</button>
+        <PlayButton tenzies={tenzies} timeIsRunning={timeIsRunning} rollDice={rollDice} />
       </div>
     </main>
   )
