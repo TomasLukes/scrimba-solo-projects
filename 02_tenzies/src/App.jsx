@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
-import Die from './Die'
-import Logo from './Logo'
-import Record from './Record'
-import Timer from './Timer'
-import Result from './Result'
+import Die from './components/Die'
+import Logo from './components/Logo'
+import Record from './components/Record'
+import Timer from './components/Timer'
+import Result from './components/Result'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
