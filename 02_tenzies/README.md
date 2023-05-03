@@ -34,7 +34,7 @@ Tenzies is my first React app from the Scrimba course that I wanted to share. It
 Desktop
 
 <p align="center">
-  <img src="./src/assets/images/screenshots/tenzies-screenshot-mobile.PNG"  alt="Screenshot of page displayed on mobile" width="250" />
+  <img src="./src/assets/images/screenshots/tenzies-screenshot-mobile.png"  alt="Screenshot of page displayed on mobile" width="250" />
 </p>
 
 Mobile
