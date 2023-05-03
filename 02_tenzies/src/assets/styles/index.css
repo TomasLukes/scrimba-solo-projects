@@ -152,6 +152,10 @@ body {
     font-weight: 700;
 }
 
+.result__text {
+    font-size: 1.125rem;
+}
+
 /* Dices */
 .dice {
     display: grid;
@@ -276,6 +280,10 @@ body {
         height: 3.75rem;
         box-shadow: 0 0 0 0.5rem;
         margin-bottom: 1.25rem;
+    }
+
+    .result__text {
+        font-size: 1rem;
     }
 
     .dice {
