@@ -119,16 +119,16 @@ export default function App() {
 
         {!timeIsRunning && <GameHeader/>}
 
-
-        
         {tenzies && <Result recordBeaten={recordBeaten} /> }
         {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
         
         <div className='dice'>
           {dieElements}
         </div>
+
         <PlayButton tenzies={tenzies} timeIsRunning={timeIsRunning} rollDice={rollDice} />
       </div>
+
     </main>
   )
 }

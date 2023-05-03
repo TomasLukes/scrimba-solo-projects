@@ -45,28 +45,31 @@ body {
 }
 
 
-/* Heading */
+/* GameHeader */
 
-.logo__container {
+.game-header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-header__title {
+    text-align: center;
+}
+
+.game-header__logo-container {
     position: relative;
 }
 
-.logo__img {
+.game-header__logo-img {
     display: block;
     margin: 0.5rem auto;
     width: 250px;
     padding: 0 1.25rem;
 }
 
-.heading__description {
-}
 
-.heading__description-title {
-    display: inline;
-    text-align: center;
-}
-
-.heading__info-icon {
+.game-header__info-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -75,7 +78,7 @@ body {
     height: 20px;
 }
 
-.info-icon__tooltiptext {
+.game-header__info-icon-text {
     visibility: hidden;
     width: 250px;
     font-size: 0.925rem;
@@ -91,7 +94,7 @@ body {
     transition: opacity 0.3s;
 }
 
-.logo__tooltip:hover .info-icon__tooltiptext {
+.logo__tooltip:hover .game-header__info-icon-text {
     visibility: visible;
     opacity: 1;
 }
@@ -220,7 +223,7 @@ body {
 
 /* Media queries */
 @media (max-width: 790px) {
-    .info-icon__tooltiptext {
+    .game-header__info-icon-text {
         width: 170px;
     }
 }
@@ -231,11 +234,11 @@ body {
         max-width: 450px;
     }
 
-    .logo__img {
+    .game-header__logo-img {
         width: 225px;
     }
 
-    .info-icon__tooltiptext {
+    .game-header__info-icon-text {
         font-size: 0.9rem;
         width: 130px;
     }
@@ -262,11 +265,11 @@ body {
         max-width: 400px;
     }
 
-    .logo__img {
+    .game-header__logo-img {
         width: 200px;
     }
 
-    .info-icon__tooltiptext {
+    .game-header__info-icon-text {
         width: 110px;
     }
 
@@ -311,7 +314,7 @@ body {
         max-width: 350px;
     }
 
-    .info-icon__tooltiptext {
+    .game-header__info-icon-text {
         font-size: 0.8125;
         width: 75px;
     }
@@ -339,7 +342,7 @@ body {
         max-width: 320px;
     }
 
-    .info-icon__tooltiptext {
+    .game-header__info-icon-text {
         width: 75px;
     }
 
