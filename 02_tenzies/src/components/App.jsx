@@ -4,6 +4,7 @@ import Die from './Die'
 import Logo from './Logo'
 import Record from './Record'
 import Timer from './Timer'
+import Result from './Result'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
@@ -121,8 +122,8 @@ export default function App() {
               </div>
           </div>
         }
-
-        {tenzies && (recordBeaten ? <p>You did it! You've set a new record!"</p> : <p>Not quite there, give it another try!</p>)}
+        
+        {tenzies && <Result recordBeaten={recordBeaten} /> }
         {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
         
         <div className='dice'>
