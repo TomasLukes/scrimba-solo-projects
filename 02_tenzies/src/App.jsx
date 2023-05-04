@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
 import Die from './components/Die'
 import GameHeader from './components/GameHeader'
+import Logo from './components/Logo'
 import Record from './components/Record'
 import Timer from './components/Timer'
 import Result from './components/Result'
@@ -117,7 +118,9 @@ export default function App() {
 
       <div className='game__container'>
 
-        {!timeIsRunning && <GameHeader/>}
+        {!timeIsRunning ? 
+          <GameHeader/> : <Logo />
+        }
 
         {tenzies && <Result recordBeaten={recordBeaten} /> }
         {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}

@@ -1,4 +1,6 @@
-/* CSS Reset */
+/* ==========================================================================
+   Basic CSS reset
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +8,40 @@
 }
 
 
-/* Utilities */
+/* ==========================================================================
+   CSS custom properties
+   ========================================================================== */
+   :root {
+    --clr-primary-700: hsl(50, 100%, 47%);
+    --clr-primary-900: hsl(0, 0%, 7%);
+
+    --clr-neutral-100: hsla(0, 0%, 100%);
+    --clr-neutral-200: hsl(340, 9%, 94%);
+    --clr-neutral-300: #F9FAFB;
+    --clr-neutral-400: hsla(220, 9%, 46%, 1);
+    --clr-neutral-900: hsla(221, 39%, 11%, 1);
+
+    --font-family-default: 'Inter', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    --fs-200: 0.75rem;      /*12px*/
+    --fs-300: 0.875rem;     /*14px*/
+    --fs-400: 1rem;         /*16px*/
+    --fs-500: 1.125rem;     /*18px*/
+    --fs-600: 1.3125rem;    /*21px*/
+    --fs-700: 1.5rem;       /*24px*/
+    --fs-800: 2.625rem;     /*42px*/
+    --fs-900: 3rem;         /*48px*/
+}
+
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
 .no-margin {
     display: block;
     width: 100%;
@@ -18,7 +53,10 @@
     align-items: center;
 }
 
-/* Layout */
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 body {
     margin: 0;
     height: 100vh;
@@ -45,8 +83,11 @@ body {
 }
 
 
-/* GameHeader */
+/* ==========================================================================
+   Components
+   ========================================================================== */
 
+/* GameHeader */
 .game-header__container {
     display: flex;
     flex-direction: column;
@@ -67,7 +108,6 @@ body {
     width: 250px;
     padding: 0 1.25rem;
 }
-
 
 .game-header__info-icon {
     position: absolute;
@@ -94,72 +134,12 @@ body {
     transition: opacity 0.3s;
 }
 
-.logo__tooltip:hover .game-header__info-icon-text {
+.game-header__info-container:hover .game-header__info-icon-text {
     visibility: visible;
     opacity: 1;
 }
 
-.heading__description-text {
-    display: none;
-    font-size: 1rem;
-    text-align: justify;
-    width: 250px;
-    margin: 0 auto;
-}
-
-/* Timer */
-.timer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.timer__logo-img {
-    width: 200px;
-}
-
-.timer__text {
-    padding: 0;
-    margin: 2rem 0 1rem 0;
-}
-
-.count-up-timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #0B2434;
-    border-radius: 50%;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-shadow: 2.5rem 2.5rem 5rem #59E391;
-    width: 4.25rem;
-    height: 4.25rem;
-    box-shadow: 0 0 0 0.5rem;
-    margin-bottom: 2rem;
-}
-  
-
-/* Record */
-.record {
-    width: 378px;
-}
-
-.record__text {
-    text-align: center;
-    font-size: 1.25rem;
-}
-
-.record__seconds {
-    font-weight: 700;
-}
-
-.result__text {
-    font-size: 1.125rem;
-}
-
-/* Dices */
+/* Dice */
 .dice {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -167,7 +147,6 @@ body {
     gap: 1.75em;
     padding: 0 2rem;
 }
-
 
 /* Die */
 .die {
@@ -190,17 +169,26 @@ body {
     cursor: not-allowed;
 }
 
-.die__value {
-
-}
-
 .die--isHeld {
     background-color: #59E391;
 }
 
+/* Record */
+.record__container {
+    width: 378px;
+}
 
-/* Button */
-.button {
+.record__text {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.record__seconds {
+    font-weight: 700;
+}
+
+/* PlayButton */
+.play-button {
     font-size: 1.25rem;
     font-weight: 700;
     color: white;
@@ -213,15 +201,57 @@ body {
     cursor: pointer;
 }
 
-.button:focus {
+.play-button:focus {
     outline: none;
 }
 
-.button:active {
+.play-button:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
 
-/* Media queries */
+/* Logo */
+.logo__img {
+    width: 200px;
+}
+
+/* Result */
+.result__text {
+    font-size: 1.125rem;
+}
+
+/* Timer */
+.timer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer__text {
+    padding: 0;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.timer__count-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #0B2434;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 2.5rem 2.5rem 5rem #59E391;
+    width: 4.25rem;
+    height: 4.25rem;
+    box-shadow: 0 0 0 0.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ==========================================================================
+   Media queries for responsive design
+   ========================================================================== */
 @media (max-width: 790px) {
     .game-header__info-icon-text {
         width: 170px;
@@ -243,7 +273,7 @@ body {
         width: 130px;
     }
 
-    .timer__logo-img {
+    .logo__img {
         width: 175px;
     }
 
@@ -251,7 +281,7 @@ body {
         font-size: 1.35rem;
     }
 
-    .count-up-timer {
+    .timer__count-up {
         font-size: 2.25rem;
         width: 4rem;
         height: 4rem;
@@ -273,11 +303,11 @@ body {
         width: 110px;
     }
 
-    .timer__logo-img {
+    .logo__img {
         width: 150px;
     }
 
-    .count-up-timer {
+    .timer__count-up {
         font-size: 2rem;
         width: 3.75rem;
         height: 3.75rem;
@@ -302,7 +332,7 @@ body {
         font-size: 1rem;
     }
 
-    .button {
+    .play-button {
         font-size: 1.125rem;
         padding: 1.125rem 2.6rem;
     }
@@ -329,11 +359,10 @@ body {
         height: 40px;
     }
 
-    .button {
+    .play-button {
         font-size: 1rem;
         padding: 1rem 2rem;
     }
-
 }
 
 @media (max-width: 375px) {
@@ -350,12 +379,11 @@ body {
         font-size: 1.25rem;
     }
 
-    .count-up-timer {
+    .timer__count-up {
         font-size: 1.75rem;
         width: 3.5rem;
         height: 3.5rem;
         box-shadow: 0 0 0 0.4rem;
         margin-bottom: 1.25rem;
     }
-
 }

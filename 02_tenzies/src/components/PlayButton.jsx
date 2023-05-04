@@ -1,6 +1,6 @@
-export default function PlayButton({ tenzies, timeIsRunning, rollDice}) {
+export default function PlayButton({ tenzies, timeIsRunning, rollDice }) {
   return (
-    <button className='button' onClick={rollDice}>
+    <button className='play-button' onClick={rollDice}>
       {tenzies ?
         'New game' : 
         timeIsRunning ? 'Roll' : `Start`}
