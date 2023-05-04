@@ -33,6 +33,7 @@ export default function App() {
     }
   }, [dice, time, bestRecord])
 
+  // Timer
   useEffect(() => {
       let interval;
       if (timeIsRunning) {
@@ -45,8 +46,8 @@ export default function App() {
       return () => clearInterval(interval);
     }, [timeIsRunning]);
 
-
-    function saveBestRecord(time) {
+  // Load/Save best time in localStorage
+  function saveBestRecord(time) {
       localStorage.setItem('bestRecord', JSON.stringify(time))
   }
 
@@ -60,6 +61,7 @@ export default function App() {
     }
   }
 
+  // Generate new die object with random value between 1-6
   function generateNewDie(id) {
     return {
       id: id, 
@@ -68,6 +70,7 @@ export default function App() {
     }
   }
 
+  // Roll dice based on game's conditions
   function rollDice() {
     if (tenzies) {
       setRecordBeaten(false);
@@ -84,6 +87,7 @@ export default function App() {
     }
   }
 
+  // Create array of 10 new dice at start of the game
   function allNewDice() {
     let diceArray = []
     for (let i = 0; i < 10; i++) {
@@ -92,6 +96,7 @@ export default function App() {
     return diceArray
   }
 
+  // When die is clicked, it change if its held or not
   function holdDice(id) {
     if (timeIsRunning) {
       setDice(oldDice => oldDice.map(die => {
@@ -102,6 +107,7 @@ export default function App() {
     }
   }
 
+  // Create die elements based on dice state
   const dieElements = dice.map(num => 
     <Die 
       key={num.id}
@@ -114,6 +120,7 @@ export default function App() {
  
   return (
     <main className="App">
+      {/* Redner confetti when player beaten previous record */}
       {tenzies && recordBeaten && <Confetti />}
 
       <div className='game__container'>
