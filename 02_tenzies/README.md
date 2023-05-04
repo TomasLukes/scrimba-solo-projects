@@ -51,6 +51,8 @@ As this was my first deployed React app, I learned:
 ## Future Improvements
 
 Having created a minimum viable product, I aim to add stretch goals and learn new skills:
-- 👷 Making most out of vanilla CSS with advanced concepts such as CSS variables, flex/grid, animations
+- ✅ Making most out of vanilla CSS with advanced concepts such as CSS variables, flex/grid, animations
 - ✅ Adding a timer to track how quickly a player wins
 - ✅ Recording the best times a player achieves
+
+- 04/05/2023 - Project is finished for now
