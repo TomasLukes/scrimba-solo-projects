@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useRef } from "react"
 import Logo from "./Logo";
+import { categories } from "../constants/categories";
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
@@ -50,20 +51,11 @@ export default function StartScreen({ fetchData }) {
         <div className="container-select">
           <label htmlFor="category">Select category:</label>
           <select name="category" id="categoryDropdown" ref={categoryInputRef}>
-            <option value="9">General Knowledge</option>
-            <option value="10">Books</option>
-            <option value="11">Film</option>
-            <option value="12">Music</option>
-            <option value="14">Television</option>
-            <option value="15">Video Games</option>
-            <option value="17">Science & Nature</option>
-            <option value="18">Computers</option>
-            <option value="21">Sports</option>
-            <option value="22">Geography</option>
-            <option value="23">History</option>
-            <option value="24">Politics</option>
-            <option value="26">Celebrities</option>
-            <option value="27">Animals</option>
+            {categories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              ))}
           </select>
         </div>
 

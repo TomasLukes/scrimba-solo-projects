@@ -25,7 +25,7 @@ export default function App() {
   return (
     <>
       {/* Conditionaly render StartScreen if data is not fetched yet, otherwise render QuestionsScreen */}
-      {questions.length < 1 ? 
+      {!questions.length ? 
         <StartScreen fetchData={fetchData} /> :
         <QuestionsScreen questions={questions} startNewGame={startNewGame} />
       }
