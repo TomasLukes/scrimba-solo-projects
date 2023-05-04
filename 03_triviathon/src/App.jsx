@@ -3,8 +3,10 @@ import StartScreen from "./components/StartScreen";
 import QuestionsScreen from "./components/QuestionsScreen";
 
 export default function App() {
+  // State to store fetched questions data from API
   const [questions, setQuestions] = useState([])
 
+  // Fetch data from Open Trivia DB API
   async function fetchData(url) {
     try {
       const res = await fetch(`${url}`)
@@ -15,15 +17,18 @@ export default function App() {
     }
   }
 
+  // Reset questions state when user starts new game
   function startNewGame() {
     setQuestions([])
   }
 
   return (
     <>
-      {questions.length > 1 ? 
-        < QuestionsScreen questions={questions} startNewGame={startNewGame} /> : 
-        <StartScreen fetchData={fetchData} />}
+      {/* Conditionaly render StartScreen if data is not fetched yet, otherwise render QuestionsScreen */}
+      {questions.length < 1 ? 
+        <StartScreen fetchData={fetchData} /> :
+        <QuestionsScreen questions={questions} startNewGame={startNewGame} />
+      }
     </>
   )
 }

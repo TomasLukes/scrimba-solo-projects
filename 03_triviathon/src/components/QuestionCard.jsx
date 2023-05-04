@@ -1,25 +1,27 @@
 /* eslint-disable react/prop-types */
 import he from 'he';
 
-export default function QuestionCard( {id, question, options, answers, gameFinished, handleClick} ) {
-
+export default function QuestionCard({ id, question, options, answers, gameFinished, handleClick }) {
+  // Correct text from fetched API with replacing HTML characters
   function correctText(text) {
     return he.decode(text)
   }
 
+  // Create option buttons from data in options state
   const optionButtons = options.map((option, index) => {
     const isSelected = answers[id].user_answer === correctText(option)
     const isCorrect = answers[id].correct_answer === correctText(option)
+
+    // Decide what class to use based on if its selected and correct answer
+    const buttonClass = 
+      `btn-answer
+      ${isSelected && 'btn-selected'}
+      ${!isSelected && gameFinished && 'btn-unselected'}
+      ${isCorrect && gameFinished && 'btn-correct'}
+      ${isSelected && !isCorrect && gameFinished && 'btn-incorrect'}`
  
     return <button
-            className={
-              `btn-answer
-              ${isSelected && 'btn-selected'}
-              ${!isSelected && gameFinished && 'btn-unselected'}
-              ${isCorrect && gameFinished && 'btn-correct'}
-              ${isSelected && !isCorrect && gameFinished && 'btn-incorrect'}
-              `}
-
+            className={buttonClass}
             key={index}
             id={id}
             value={correctText(option)}
