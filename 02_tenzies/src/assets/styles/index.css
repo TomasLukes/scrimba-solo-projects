@@ -12,19 +12,17 @@
    CSS custom properties
    ========================================================================== */
    :root {
-    --clr-primary-700: hsl(50, 100%, 47%);
-    --clr-primary-900: hsl(0, 0%, 7%);
+    --clr-primary-500: #59E391;
+    --clr-primary-700: #5035FF;;  
+    --clr-primary-900: #0B2434;
 
-    --clr-neutral-100: hsla(0, 0%, 100%);
-    --clr-neutral-200: hsl(340, 9%, 94%);
-    --clr-neutral-300: #F9FAFB;
-    --clr-neutral-400: hsla(220, 9%, 46%, 1);
-    --clr-neutral-900: hsla(221, 39%, 11%, 1);
+    --clr-neutral-100: #FFFFFF;
+    --clr-neutral-200: #F5F5F5;
 
-    --font-family-default: 'Inter', sans-serif;
+    --ff-default: 'Karla', sans-serif;
 
     --fw-regular: 400;
-    --fw-medium: 500;
+    --fw-medium: 600;
     --fw-bold: 700;
     --fw-black: 800;
 
@@ -64,12 +62,15 @@ body {
     display: grid;
     place-content: center;
     overflow: hidden;
-    background-color: #0B2434;
-    font-family: 'Karla', sans-serif;
+    background-color: var(--clr-primary-900);
+
+    font-family: var(--ff-default);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
 }
 
 .game__container {
-    background-color:#F5F5F5;
+    background-color: var(--clr-neutral-200);
     width: 500px;
     height: 500px;
     margin: 0 auto;
@@ -121,9 +122,9 @@ body {
 .game-header__info-icon-text {
     visibility: hidden;
     width: 250px;
-    font-size: 0.925rem;
-    font-weight: 600;
-    background-color: #59E391;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+    background-color: var(--clr-primary-500);
     text-align: left;
     border-radius: 6px;
     padding: 5px;
@@ -155,14 +156,14 @@ body {
     align-items: center;
     text-align: center;
 
-    background-color: white;
+    background-color: var(--clr-neutral-100);
     width: 50px;
     height: 50px;
 
     cursor: pointer;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    font-size: 1.25rem;
+    font-size: var(--fs-500);
 }
 
 .die--not-started {
@@ -170,7 +171,7 @@ body {
 }
 
 .die--isHeld {
-    background-color: #59E391;
+    background-color: var(--clr-primary-500);
 }
 
 /* Record */
@@ -180,22 +181,24 @@ body {
 
 .record__text {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: var(--fs-500);
 }
 
 .record__seconds {
-    font-weight: 700;
+    font-weight: var(--fw-bold);
 }
 
 /* PlayButton */
 .play-button {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: white;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
 
     padding: 1.25rem 3rem;
+    
+    margin-top: 0.75rem;
     border: none;
-    background: #5035FF;
+    background: var(--clr-primary-700);
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.18);
     border-radius: 4px;
     cursor: pointer;
@@ -216,7 +219,7 @@ body {
 
 /* Result */
 .result__text {
-    font-size: 1.125rem;
+    font-size: var(--fs-500);
 }
 
 /* Timer */
@@ -237,11 +240,11 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    color: #0B2434;
+    color: var(--clr-primary-900);
     border-radius: 50%;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-shadow: 2.5rem 2.5rem 5rem #59E391;
+    font-weight: bold;
+    font-size: var(--fs-800);
+    text-shadow: 2.5rem 2.5rem 5rem var(--clr-primary-500);
     width: 4.25rem;
     height: 4.25rem;
     box-shadow: 0 0 0 0.5rem;
@@ -269,7 +272,7 @@ body {
     }
 
     .game-header__info-icon-text {
-        font-size: 0.9rem;
+        font-size: var(--fs-300);
         width: 130px;
     }
 
@@ -278,7 +281,7 @@ body {
     }
 
     .timer__text {
-        font-size: 1.35rem;
+        font-size: var(--fs-600);
     }
 
     .timer__count-up {
@@ -316,7 +319,7 @@ body {
     }
 
     .result__text {
-        font-size: 1rem;
+        font-size: var(--fs-400);
     }
 
     .dice {
@@ -329,11 +332,11 @@ body {
         max-height: 45px;
 
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: var(--fs-400);
     }
 
     .play-button {
-        font-size: 1.125rem;
+        font-size: var(--fs-500);
         padding: 1.125rem 2.6rem;
     }
 }
@@ -345,7 +348,7 @@ body {
     }
 
     .game-header__info-icon-text {
-        font-size: 0.8125;
+        font-size: var(--fs-300);
         width: 75px;
     }
 
@@ -354,7 +357,7 @@ body {
     }
 
     .die {
-        font-size: 0.9rem;
+        font-size: var(--fs-300);
         width: 40px;
         height: 40px;
     }
@@ -376,11 +379,11 @@ body {
     }
 
     .timer__text {
-        font-size: 1.25rem;
+        font-size: var(--fs-600);
     }
 
     .timer__count-up {
-        font-size: 1.75rem;
+        font-size: var(--fs-700);
         width: 3.5rem;
         height: 3.5rem;
         box-shadow: 0 0 0 0.4rem;
