@@ -1,5 +1,5 @@
-import MovieCard from './MovieCard'
-import BeforeSearch from './BeforeSearch'
+import MovieCard from './shared/MovieCard'
+import BeforeSearch from './Home/BeforeSearch'
 import { useState, useEffect } from 'react';
 
 

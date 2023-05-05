@@ -1,13 +1,12 @@
 import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import SearchResults from './components/SearchResults'
-import Footer from './components/Footer'
-import MovieCard from './components/MovieCard'
+import { Link } from "react-router-dom"
+import HomeHeader from '../components/Home/HomeHeader'
+import SearchResults from '../components/SearchResults'
+import Footer from '../components/shared/Footer'
 
 const apiKey = `apikey=b9b3f97a`   
 
-export default function AppWatchlist() {
+export default function Home() {
 
   const [searchResults, setSearchResults] = useState([])
 
@@ -37,10 +36,10 @@ export default function AppWatchlist() {
   };
 
   return (
-    <>
-      <Header fetchMovies={fetchMovies} />
-      <SearchResults results={searchResults} />
-      <Footer />
-    </>
+    <div className='Home'>
+        <HomeHeader fetchMovies={fetchMovies} />
+        <SearchResults results={searchResults} />
+        <Footer />
+    </div>
   )
 }
