@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useFetchMovies } from '../hooks/useFetchMovies'
 import WatchlistHeader from '../components/Watchlist/WatchlistHeader'
 import SearchResults from '../components/SearchResults'
 import Footer from '../components/shared/Footer'
@@ -6,33 +7,20 @@ import Footer from '../components/shared/Footer'
 const apiKey = `apikey=b9b3f97a`   
 
 export default function Watchlist() {
+  const myWatchlist = JSON.parse(localStorage.getItem('myWatchlist'))     
 
-  const [searchResults, setSearchResults] = useState([])
-
-  async function fetchMovies(searchTerm) {
-
+  async function fetchWatchlist(myWatchlist) {
     try {
-      const response = await fetch(`https://www.omdbapi.com/?apikey=b9b3f97a&s=${searchTerm}`);
-      const data = await response.json();
-      const searchedMovies = data.Search;
-  
-      if (!searchedMovies) {
-        console.log(`<p>Unable to find what you’re looking for. Please try another search.</p>`)
-      } else {
-        const detailedMovies = await Promise.all(
-        searchedMovies.map(async (movie) => {
-          const detailedResponse = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=b9b3f97a`);
-          const detailedData = await detailedResponse.json();
-          return detailedData;
-        })
-      );
-      setSearchResults(detailedMovies);
+        if (myWatchlist.length) {
+        const savedMovies = await Promise.all(myWatchlist.map(async (movie) => {
+            const response = await fetch(`https://www.omdbapi.com/?i=${movie}&${apiKey}`);
+            const data = await response.json();
+            return data;
+        }));
+    } catch (error) {
+        console.log(error);
     }
-
-    } catch(error) {
-      console.log(error);
-    }
-  };
+  }
 
   return (
     <>
