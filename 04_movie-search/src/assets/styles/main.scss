@@ -78,8 +78,6 @@ nav {
     }
 }
 
-
-
 .search-form__btn:hover {
     cursor: pointer;
     transform: scale(1.025);
@@ -99,14 +97,35 @@ nav {
 }
 
 // WatchlistHeader
-.container-header-flex {
+.watchlist-header__container {
     @include flex-row-center-spaced;
     gap: 2.5rem;
     width: 100%;
     width: 600px;
     padding: 0 3em;
+
+    &__logo-img {
+        min-width: 75px;
+        max-width: 100px;
+    }
 }
 
+.search-nav {
+    &__container {
+        @include flex-row-center;
+        gap: 0.5rem;
+    }
+
+    &__search-icon {
+        fill: $clr-neutral-200;
+        min-width: 25px;
+    }
+
+    &__label {
+        font-size: $fs-400;
+        font-weight: 600;
+    }
+}
 
 // Search results
 .search-results {
