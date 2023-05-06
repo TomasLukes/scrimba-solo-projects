@@ -18,7 +18,7 @@ export default function HomeHeader({ fetchMovies }) {
   return (
     <header>
       <nav>
-        <div className="flex-container-header">
+        <div className="container-header-grid">
 
           <Link to="/">
             <img src="./src/assets/images/logo-no-bg.svg" alt="MovieSearch logo" className="logo-img" />
