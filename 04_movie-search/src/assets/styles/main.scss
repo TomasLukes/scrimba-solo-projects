@@ -1,0 +1,411 @@
+/* ==========================================================================
+   Basic CSS reset
+   ========================================================================== */
+
+   * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    line-height: 1;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   CSS custom properties
+   ========================================================================== */
+
+:root {
+    --clr-primary-700: hsl(50, 100%, 47%);
+    --clr-primary-900: hsl(0, 0%, 7%);
+
+    --clr-neutral-100: hsla(0, 0%, 100%);
+    --clr-neutral-200: hsl(340, 9%, 94%);
+    --clr-neutral-300: #F9FAFB;
+    --clr-neutral-400: hsla(220, 9%, 46%, 1);
+    --clr-neutral-900: hsla(221, 39%, 11%, 1);
+
+    --font-family-default: 'Inter', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    --fs-200: 0.75rem;      /*12px*/
+    --fs-300: 0.875rem;     /*14px*/
+    --fs-400: 1rem;         /*16px*/
+    --fs-500: 1.125rem;     /*18px*/
+    --fs-600: 1.3125rem;    /*21px*/
+    --fs-700: 1.5rem;       /*24px*/
+    --fs-800: 2.625rem;     /*42px*/
+    --fs-900: 3rem;         /*48px*/
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+body {
+    font-family: var(--font-family-default);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    min-height: 100vh;
+}
+
+.container-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    max-width: 1000px;
+    padding: 0 3em;
+}
+
+.container-header-flex {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    width: 100%;
+    width: 600px;
+    padding: 0 3em;
+}
+
+
+.watchlist-flex {
+    justify-self: flex-end;
+}
+
+.movie-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.flex {
+    align-items: center;
+    display: flex;
+    gap: 0.25em;
+}
+
+.flex-row {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.flex-row-spaced {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1em;
+    width: 90%;
+}
+
+.flex-column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: auto 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+   .search-results {
+    align-content: start;
+    color: var(--clr-neutral-900);
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 5em 2em;
+}
+
+a {
+    color: var(--clr-neutral-200);
+    text-decoration: none;
+}
+
+.text-add-movies {
+    color: var(--clr-primary-900);
+    font-weight: var(--fw-bold);
+}
+
+.text-movie-title {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    max-width: 25ch;
+}
+
+.text-movie-genre {
+    font-size: var(--fs-300);
+}
+
+.text-movie-plot {
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+/* ==========================================================================
+   Images & media
+   ========================================================================== */
+
+.logo-img {
+    flex-shrink: 0;
+    min-width: 75px;
+    max-width: 100px;
+}
+
+.logo-img-watchlist {
+    flex-shrink: 0;
+    min-width: 50px;
+}
+
+.icon-search {
+    background: url(../images/icon-search.svg) no-repeat center;
+    height: 2rem;
+    margin: 0.5em 0.5em;
+    width: 2rem;
+}
+
+.icon-nav {
+    flex-shrink: 0;
+    min-width: 25px;
+}
+
+.icon-nav path {
+    fill: var(--clr-neutral-200);
+}
+
+.movie-poster {
+    border-radius: 2.5px;
+    margin-right: 2em;
+    height: 150px;
+    width: 100px;
+}
+
+svg, img {
+    flex-shrink: 0;
+}
+
+.icon-add-watchlist {
+    flex-shrink: 0;
+    min-width: 1.5rem;
+    padding-left: 0.25em;
+}
+
+.icon-add-watchlist:hover {
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+nav {
+    background-color: var(--clr-primary-900);
+    display: flex;
+    min-height: 100px;
+    max-height: 200px;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-neutral-100);
+    border-radius: 6px;
+    width: 600px;
+    width: 100%;
+}
+
+#searchInput {
+    border: none;
+    width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: hsla(221, 39%, 11%, 1) !important;
+}
+
+input::placeholder {
+    background-color: var(--clr-neutral-100);
+    opacity: 1;
+}
+
+input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+#searchBtn {
+    background-color: var(--clr-neutral-300);
+    border: 2px solid #D1D5DB;
+    font-size: 0.85rem;
+    padding: 1em 3em;
+    border-radius: 0 6px 6px 0;
+}
+
+#searchBtn:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.card-movie {
+    align-items: center;
+    border-bottom: 1.5px solid #E5E7EB;
+    display: flex;
+    justify-content: center;
+    max-height: 225px;
+    width: 600px;
+    padding-bottom: 1em;
+}
+
+#addToListBtn {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+footer {
+    align-content: center;
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-200);
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Media queries for responsive design
+   ========================================================================== */
+
+   @media (max-width: 1200px) {
+    .container-header-grid {
+        grid-template-columns: 1fr 500px 1fr;
+    }
+
+    form {
+        width: 500px;
+    }
+
+    .card-movie {
+        width: 500px;
+    }
+
+
+}
+
+   @media (max-width: 850px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .container-header-grid {
+        padding: 0 1.5rem;
+        margin: 1rem 0;
+        grid-template-columns: 1fr minmax(100px, 150px) 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "logo . link"
+            "form form form";
+        gap: 0.5rem;
+        align-items: center;
+        width: 500px;
+    }
+
+    .container-header-flex {
+        min-width: 100px;
+    }
+
+    .header-text-search {
+        display: none;
+    }
+
+    form {
+        min-width: 100px;
+        width: 100%;
+        grid-area: form;  
+    }
+
+    .watchlist-flex {
+        grid-area: link; 
+    }
+
+    .logo-img-watchlist {
+        margin-right: 100%;
+        max-width: 90px;
+    }
+
+    .card-movie {
+        align-items: start;
+        max-height: 500px;
+        min-width: 300px;
+    }
+
+    .text-movie-title {
+        font-size: var(--fs-500);
+        font-weight: var(--fw-bold);
+        width: 12rem;
+    }
+
+    #searchBtn {
+        padding: 0.6em 1.8em;
+    }
+
+    .icon-search {
+        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .movie-description {
+        font-size: var(--fs-300);
+    }
+
+    .search-results {
+        align-content: start;
+        color: var(--clr-neutral-900);
+        display: grid;
+        gap: 2em;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 1.5em 1em;
+    }
+
+    .card-movie {
+        width: auto;
+        max-width: 500px;
+        min-width: 300px;
+    }
+}

@@ -5,7 +5,6 @@ import {
 import { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Watchlist from './pages/Watchlist'
-import './App.css'
 
 export default function App() {
   // Get saved watchlist in localStorage if it exists, otherwise set it to empty array
