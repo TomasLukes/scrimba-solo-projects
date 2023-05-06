@@ -42,10 +42,7 @@ body {
 }
 
 .container-header-flex {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-row-spaced;
     gap: 2.5rem;
     width: 100%;
     width: 600px;
@@ -59,37 +56,6 @@ body {
 
 .movie-description {
     width: 100%;
-}
-
-/* ==========================================================================
-   Utilities
-   ========================================================================== */
-
-.flex {
-    align-items: center;
-    display: flex;
-    gap: 0.25em;
-}
-
-.flex-row {
-    align-items: center;
-    display: flex;
-    gap: 0.5em;
-    padding-bottom: 1em;
-    width: 100%;
-}
-
-.flex-row-spaced {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 1em;
-    width: 90%;
-}
-
-.flex-column {
-    @include flex-column;
 }
 
 /* ==========================================================================
@@ -192,15 +158,14 @@ svg, img {
 
 nav {
     background-color: $clr-primary-900;
-    display: flex;
+    @include flex-row-center;
     min-height: 100px;
     max-height: 200px;
-    justify-content: center;
+
 }
 
 form {
-    display: flex;
-    align-items: center;
+    @include flex-row-center;
     background-color: $clr-neutral-100;
     border-radius: 6px;
     width: 600px;
@@ -248,10 +213,8 @@ input:focus {
 }
 
 .card-movie {
-    align-items: center;
+    @include flex-row-center;
     border-bottom: 1.5px solid #E5E7EB;
-    display: flex;
-    justify-content: center;
     max-height: 225px;
     width: 600px;
     padding-bottom: 1em;
@@ -264,12 +227,10 @@ input:focus {
 }
 
 footer {
-    align-content: center;
+    @include flex-row-center;
     background-color: $clr-primary-900;
     color: $clr-neutral-200;
-    display: flex;
     height: 60px;
-    justify-content: center;
 }
 
 /* ==========================================================================
