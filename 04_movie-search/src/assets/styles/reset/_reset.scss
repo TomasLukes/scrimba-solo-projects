@@ -1,0 +1,67 @@
+@import '../base/base.scss';
+
+/* ==========================================================================
+   Basic CSS reset
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+     margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+// Links reset
+a {
+    color: $clr-neutral-200;
+    text-decoration: none;
+}
+
+// Input reset
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: hsla(221, 39%, 11%, 1) !important;
+}
+
+input::placeholder {
+    background-color: $clr-neutral-100;
+    opacity: 1;
+}
+
+input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
