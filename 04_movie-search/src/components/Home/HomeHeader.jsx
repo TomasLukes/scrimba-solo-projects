@@ -19,11 +19,11 @@ export default function HomeHeader({ fetchMovies }) {
     <header>
       <nav>
         <div className="flex-container-header">
+
           <Link to="/">
-            <div>
             <img src="./src/assets/images/logo-no-bg.svg" alt="MovieSearch logo" className="logo-img" />
-            </div>
           </Link>
+
           <form onSubmit={handleSearch}>
               <i className="icon-search"></i>
               <input type="text" id="searchInput" placeholder="Search for a movie" value={searchTerm} onChange={(e) => handleChange(e)}/>
@@ -36,6 +36,7 @@ export default function HomeHeader({ fetchMovies }) {
               <h2>Watchlist</h2>
             </div>
           </Link>
+          
         </div>
       </nav>
     </header>

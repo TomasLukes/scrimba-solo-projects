@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 export default function EmptyWatchlist() {
   return (
-    <div class="flex-column">
-      <p>Your watchlist is looking a little empty...</p>
-      <a class="text-add-movies flex" href="./index.html">
-          <img src="./images/icon-add.svg" alt="Add to watchlist button"></img>
+    <div className="flex-column">
+      <Link to="/" className="text-add-movies flex">
+        <p>Your watchlist is looking a little empty...</p>
+          <img src="./src/assets/images/icon-add.svg" alt="Add to watchlist button"></img>
           <p>Let’s add some movies!</p>
-      </a>
+      </Link>
     </div>
   );
 }
