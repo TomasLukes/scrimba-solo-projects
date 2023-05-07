@@ -8,7 +8,7 @@
     border: 1.5px solid #E5E7EB;
     box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.025);
     border-radius: 9px;
-    padding: 1.5rem 2rem 3rem 2rem;
+    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
 
     &:hover { 
         box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05);
@@ -43,6 +43,7 @@
 
     &__plot {
         color: $clr-neutral-400;
+        font-size: $fs-300;
         line-height: 1.3;
     }
 }

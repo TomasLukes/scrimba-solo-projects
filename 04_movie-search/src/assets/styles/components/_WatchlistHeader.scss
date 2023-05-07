@@ -2,7 +2,8 @@
     @include flex-row-center-spaced;
     gap: 2.5rem;
     width: 100%;
-    width: 600px;
+    max-width: 1800px;
+    padding: 0 5rem;
 
     &__logo-img {
         min-width: 75px;
@@ -24,5 +25,17 @@
     &__label {
         font-size: $fs-400;
         font-weight: 600;
+    }
+}
+
+@media (max-width: 1750px) {
+    .watchlist-header__container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .watchlist-header__container {
+
     }
 }

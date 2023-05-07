@@ -5,8 +5,9 @@
         align-items: center;
         justify-content: space-evenly;
         gap: 2.5rem;
-        max-width: 1000px;
-        padding: 0 3em;
+        width: 100%;
+        max-width: 1800px;
+        padding: 0 5rem;
     }
 
     &__logo-img{
@@ -52,12 +53,24 @@
 .watchlist-nav{
     &__container {
     @include flex-row-center;
-    min-width: 25px;
+    justify-self: flex-end;
     gap: 0.25rem;
     fill: $clr-neutral-200;
     }
 
     &__bookmark-icon {
         min-width: 50px;
+    }
+}
+
+@media (max-width: 1750px) {
+    .home-header__container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-header__container {
+
     }
 }

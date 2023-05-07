@@ -2,6 +2,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1800px;
     min-height: calc(100vh - 160px);
     margin: 0 auto;
     padding: 3rem 3rem;
@@ -9,9 +10,20 @@
     color: $clr-neutral-900;
 }
 
+.watchlist__header {
+    text-align: center;
+    margin-top: 3rem;
+
+    &-border {
+        padding-left: 0.375rem;
+        border-left: 0.5rem solid $clr-primary-700;
+    }
+}
+
 @media (max-width: 1750px) {
     .search-results {
         grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
     }
 }
 
