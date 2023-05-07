@@ -1,7 +1,7 @@
 .home-header {
     &__container {
         display: grid;
-        grid-template-columns: 1fr 600px 1fr;
+        grid-template-columns: 1fr 550px 1fr;
         align-items: center;
         justify-content: space-evenly;
         gap: 2.5rem;
@@ -69,8 +69,27 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 850px) {
     .home-header__container {
+        padding: 0 1.5rem;
+        margin: 1rem 0;
+        grid-template-columns: 1fr minmax(100px, 150px) 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "logo . link"
+            "form form form";
+        gap: 0.5rem;
+        align-items: center;
+        width: 500px;
+    }
 
+    .search-form{
+        min-width: 100px;
+        width: 100%;
+        grid-area: form;  
+    }
+
+    .watchlist-nav__container {
+        grid-area: link; 
     }
 }

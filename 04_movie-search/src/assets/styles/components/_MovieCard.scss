@@ -72,3 +72,56 @@
         padding-bottom: 1.5rem; 
     }
 }
+
+@media (max-width: 600px) {
+    .movie-card {
+        width: 450px;
+        height: 260px;
+        padding: 1rem 1rem 1.5rem 1rem;
+
+        &__title {
+            font-size: $fs-500;
+            max-width: 25ch;
+        }
+    }
+
+    .u {
+        &-heading {
+            padding-bottom: 0.5rem;
+        }
+
+        &-subheading {
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .movie-card {
+        width: 400px;
+        height: 280px;
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .movie-card {
+        width: auto;
+        min-width: 200px;
+        height: 350px;
+        padding: 1rem 1rem 1.5rem 1rem;
+
+        &__poster {
+            width: 75px;
+            height: 112.5px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .movie-card {
+        min-width: 200px;
+        height: 400px;
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+}
