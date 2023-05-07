@@ -1,0 +1,8 @@
+.before-search {
+    @include flex-column;
+    gap: 0.75rem;
+    
+    &__label {
+        font-size: $fs-500;
+    }
+}

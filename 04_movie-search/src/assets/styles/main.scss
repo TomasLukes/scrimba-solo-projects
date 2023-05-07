@@ -34,15 +34,17 @@ nav {
 // HomeHeader
 @import './components/HomeHeader';
 
+// BeforeSearch
+@import './components/BeforeSearch';
+
+// SearchResults
+@import './components/SearchResults';
+
 // WatchlistHeader
 @import './components/WatchlistHeader';
 
-// Search results
-@import './components/SearchResults';
-
-// Movie card
+// MovieCard
 @import './components/MovieCard';
-
 
 #addToListBtn {
     background: none;
