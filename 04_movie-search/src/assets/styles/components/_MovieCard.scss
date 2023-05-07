@@ -1,9 +1,18 @@
 .movie-card {
     @include flex-row-center;
-    border-bottom: 1.5px solid #E5E7EB;
-    max-height: 225px;
-    width: 600px;
-    padding-bottom: 1em;
+    width: 550px;
+    height: 250px;
+    
+    overflow: hidden;
+    background: linear-gradient(90deg, hsla(220, 9%, 46%, 0.0125) 0%, hsla(340, 5%, 97%, 1) 100%);
+    border: 1.5px solid #E5E7EB;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.025);
+    border-radius: 9px;
+    padding: 1.5rem 2rem 3rem 2rem;
+
+    &:hover { 
+        box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.05);
+    }
 
     &__poster {
         align-self: flex-start;
@@ -13,6 +22,12 @@
         max-width: 100px;
     }
 
+    &__title {
+        font-size: $fs-600;
+        font-weight: $fw-bold;
+        max-width: 25ch;
+    }
+
     &__score {
         padding-top: 0.125rem;
     }
@@ -20,23 +35,15 @@
     &__star-icon {
         height: 18px;
         width: 18px;
-
     }
 
-    &__add-movies {
-        color: $clr-primary-900;
-        font-weight: $fw-bold;
-    }
-
-    &__title {
-        font-size: $fs-600;
-        font-weight: $fw-bold;
+    &__genre {
         max-width: 25ch;
     }
 
     &__plot {
         color: $clr-neutral-400;
-        line-height: 1.5;
+        line-height: 1.3;
     }
 }
 
@@ -49,7 +56,7 @@
         @include flex-row-center-spaced;
         line-height: 1;
         width: 100%;
-        padding-bottom: 0.6rem; 
+        padding-bottom: 1rem; 
     }
 
     &-rating {
@@ -60,6 +67,6 @@
     &-subheading {
         @include flex-row-center-spaced;
         font-size: $fs-300;
-        padding-bottom: 0.9rem; 
+        padding-bottom: 1.5rem; 
     }
 }

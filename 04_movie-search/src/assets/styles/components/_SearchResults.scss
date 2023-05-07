@@ -1,10 +1,22 @@
 .search-results {
     display: grid;
-    place-content: center;
     justify-items: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     min-height: calc(100vh - 160px);
-    padding: 2.5rem 2rem;
-    gap: 2rem;
+    margin: 0 auto;
+    padding: 3rem 3rem;
+    gap: 1rem;
     color: $clr-neutral-900;
+}
+
+@media (max-width: 1750px) {
+    .search-results {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .search-results {
+        grid-template-columns: 1fr;
+    }
 }

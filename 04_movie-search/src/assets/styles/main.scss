@@ -10,6 +10,7 @@ body {
     font-size: $fs-400;
     font-weight: $fw-regular;
     min-height: 100vh;
+    background: linear-gradient(90deg, hsla(210, 20%, 98%, 1) 0%, hsla(210, 20%, 98%, 1) 50%, hsla(210, 20%, 98%, 1) 100%);
 }
 
 nav {
