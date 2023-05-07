@@ -2,9 +2,13 @@ import ButtonAdd from "./ButtonAdd";
 import ButtonRemove from "./ButtonRemove";
 
 export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title, Metascore, Runtime, Genre, imdbID, Plot }) {
+  function posterControl(Poster) {
+    return Poster === 'N/A' ? './src/assets/images/poster-placeholder.png' : Poster;
+  }
+
   return (
     <div className='movie-card'>
-      <img src={Poster} alt="" className="movie-card__poster" />
+      <img src={posterControl(Poster)} alt="" className="movie-card__poster" />
       <div className="u-info">
         <div className="u-heading">
           <h3 className="movie-card__title">{Title}</h3>
