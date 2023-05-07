@@ -1,0 +1,21 @@
+.empty-watchlist {
+
+    &__container {
+    @include flex-column;
+    gap: 1rem;
+    margin-top: 150px;
+    }
+
+    &__heading {
+        color: $clr-neutral-400;
+        font-weight: $fw-bold;
+        font-size: $fs-600;
+    }
+
+    &__link {
+    @include flex-row-content-center;
+    gap: 0.5rem;
+    color: $clr-primary-900;
+    font-weight: $fw-bold;
+    }
+}

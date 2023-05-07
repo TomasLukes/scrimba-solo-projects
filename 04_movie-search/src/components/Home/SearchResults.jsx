@@ -25,7 +25,7 @@ export default function SearchResults({ searchResults, isLoading, savedWatchlist
         {!movieCards.length && !isLoading && <BeforeSearch />}
         { isLoading && <Loader />}
         <section className="search-results">
-          { movieCards }
+          { !isLoading && movieCards }
         </section>  
     </main>
   );
