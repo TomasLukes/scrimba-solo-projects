@@ -1,8 +1,7 @@
 .before-search {
     @include flex-column;
-    padding-top: 150px;
+    margin-top: 150px;
     gap: 0.75rem;
-    grid-column-start: 2;
     
     &__label {
         font-size: $fs-500;
