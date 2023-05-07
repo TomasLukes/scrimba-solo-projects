@@ -4,7 +4,7 @@ import SearchResults from '../components/Home/SearchResults'
 import Footer from '../components/shared/Footer'
 
 export default function Home({ savedWatchlist, updateWatchlist }) {
-  const { searchResults, fetchMovies, isLoading } = useFetchMovies();
+  const { searchResults, fetchMovies, isLoading, dataNotFound } = useFetchMovies();
 
   return (
     <div className='Home'>
@@ -12,6 +12,7 @@ export default function Home({ savedWatchlist, updateWatchlist }) {
       <SearchResults 
         searchResults={searchResults}
         isLoading={isLoading}
+        dataNotFound={dataNotFound}
         savedWatchlist={savedWatchlist}
         updateWatchlist={updateWatchlist}
       />

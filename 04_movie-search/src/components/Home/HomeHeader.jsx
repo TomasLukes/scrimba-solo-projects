@@ -30,7 +30,7 @@ export default function HomeHeader({ fetchMovies }) {
               type="text"
               placeholder="Search for a movie"
               value={searchTerm}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             <button className="search-form__btn" type="submit">Search</button>
           </form>

@@ -1,0 +1,10 @@
+.data-not-found {
+    margin-top: 150px;
+    text-align: center;
+
+    &__message {
+        color: $clr-neutral-400;
+        font-weight: $fw-bold;
+        font-size: $fs-600;
+    }
+}

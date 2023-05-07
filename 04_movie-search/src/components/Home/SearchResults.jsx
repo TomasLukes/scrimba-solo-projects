@@ -1,8 +1,9 @@
 import Loader from '../shared/Loader';
 import MovieCard from '../shared/MovieCard'
 import BeforeSearch from './BeforeSearch'
+import DataNotFound from './DataNotFound';
 
-export default function SearchResults({ searchResults, isLoading, savedWatchlist, updateWatchlist }) {
+export default function SearchResults({ searchResults, isLoading, dataNotFound, savedWatchlist, updateWatchlist }) {
 
   const movieCards = searchResults.map((movie) => {
     let inWatchlist = savedWatchlist.includes(movie.imdbID);
@@ -22,7 +23,8 @@ export default function SearchResults({ searchResults, isLoading, savedWatchlist
 
   return (
     <main>
-        {!movieCards.length && !isLoading && <BeforeSearch />}
+        {!movieCards.length && !isLoading && !dataNotFound && <BeforeSearch />}
+        { dataNotFound && <DataNotFound />}
         { isLoading && <Loader />}
         <section className="search-results">
           { !isLoading && movieCards }
