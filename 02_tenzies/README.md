@@ -5,11 +5,10 @@
 # Tenzies
 
 Tenzies is my first React app from the Scrimba course that I wanted to share. It's a dice-based game where the objective is to roll all dice to display the same number. In the game, the player can:
-- Make an initial roll with all new dice
-- Click to hold a die's value for the next round
-- Remove the hold attribute from a die by clicking it again
-- Roll new dice with each turn
-- Win the game when all dice have the same value
+- Roll new dice at the start and for each round
+- Click dice to hold/unhold value
+- Win when all dice values match
+- Timer starts with the game. Beat best record stored in local storage!
 
 ## Live Demo
 
@@ -44,15 +43,18 @@ Mobile
 As this was my first deployed React app, I learned:
 - Setting up a React project with Vite
 - Understanding JSX and its syntax
-- Applying basic React concepts such as components and passing props, as well as hooks like useState and useEffect
+- Applying basic React concepts (props, useState, useEffect.. )
+- Implementing BEM for CSS naming to achieve cleaner and more maintainable code
 - Adapting and modifying design elements from a Figma file
 - Creating a single-page application with more complex logic
 
 ## Future Improvements
 
 Having created a minimum viable product, I aim to add stretch goals and learn new skills:
-- ✅ Making most out of vanilla CSS with advanced concepts such as CSS variables, flex/grid, animations
+- ✅ Making most out of vanilla CSS with advanced concepts such as CSS variables, flex/grid, animations, BEM naming
 - ✅ Adding a timer to track how quickly a player wins
 - ✅ Recording the best times a player achieves
+
+## Last update:
 
 - 04/05/2023 - Project is finished for now

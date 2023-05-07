@@ -49,3 +49,7 @@ Building upon my previous knowledge of React basics, I learned:
 After creating a minimum viable product, I aim to add stretch goals and learn new skills:
 - 👷‍♂️ Refactoring the code to be more clean and organize project structure for scalibility
 - 👷‍♂️ Styling the application using Tailwind
+
+## Last update:
+
+- 07/05/2023 - Project will be styled with Tailwind
