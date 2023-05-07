@@ -1,6 +1,5 @@
 import MovieCard from '../shared/MovieCard'
 import BeforeSearch from './BeforeSearch'
-import { useState, useEffect } from 'react';
 
 export default function SearchResults({ searchResults, savedWatchlist, updateWatchlist }) {
 
@@ -22,7 +21,7 @@ export default function SearchResults({ searchResults, savedWatchlist, updateWat
 
   return (
     <main>
-        <section className="search-results" id="searchResults">
+        <section className="search-results">
           { movieCards.length ? movieCards : <BeforeSearch /> }
         </section>  
     </main>

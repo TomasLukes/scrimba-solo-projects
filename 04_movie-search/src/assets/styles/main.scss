@@ -46,21 +46,8 @@ nav {
 // MovieCard
 @import './components/MovieCard';
 
-#addToListBtn {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.icon-add-watchlist {
-    flex-shrink: 0;
-    min-width: 1.5rem;
-    padding-left: 0.25em;
-}
-
-.icon-add-watchlist:hover {
-    cursor: pointer;
-}
+// UpdateWatchlistBtn (ButtonAdd + ButtonRemove)
+@import './components/UpdateWatchlistBtn';
 
 // Footer
 @import './components/_Footer';

@@ -1,40 +1,65 @@
-.card-movie {
+.movie-card {
     @include flex-row-center;
     border-bottom: 1.5px solid #E5E7EB;
     max-height: 225px;
     width: 600px;
     padding-bottom: 1em;
+
+    &__poster {
+        align-self: flex-start;
+        border-radius: 2.5px;
+        margin-right: 2em;
+        width: 100%;
+        max-width: 100px;
+    }
+
+    &__score {
+        padding-top: 0.125rem;
+    }
+
+    &__star-icon {
+        height: 18px;
+        width: 18px;
+
+    }
+
+    &__add-movies {
+        color: $clr-primary-900;
+        font-weight: $fw-bold;
+    }
+
+    &__title {
+        font-size: $fs-600;
+        font-weight: $fw-bold;
+        max-width: 25ch;
+    }
+
+    &__plot {
+        color: $clr-neutral-400;
+        line-height: 1.5;
+    }
 }
 
-.movie-description {
-    width: 100%;
-}
+.u {
+    &-info {
+        align-self: flex-start;
+    }
 
-.movie-poster {
-    border-radius: 2.5px;
-    margin-right: 2em;
-    height: 150px;
-    width: 100px;
-}
+    &-heading {
+        @include flex-row-center-spaced;
+        line-height: 1;
+        width: 100%;
+        padding-bottom: 0.6rem; 
+    }
 
-.text-add-movies {
-    color: $clr-primary-900;
-    font-weight: $fw-bold;
-}
+    &-rating {
+        @include flex-row-center;
+        gap: 0.25rem;
+    }
 
-.text-movie-title {
-    font-size: $fs-600;
-    font-weight: $fw-bold;
-    max-width: 25ch;
-}
-
-.text-movie-genre {
-    font-size: $fs-300;
-}
-
-.text-movie-plot {
-    color: $clr-neutral-400;
-    font-weight: $fw-regular;
-    line-height: 1.5;
-    max-width: 90%;
+    &-subheading {
+        @include flex-row-center-spaced;
+        font-size: $fs-300;
+        padding-bottom: 0.9rem; 
+    }
 }
