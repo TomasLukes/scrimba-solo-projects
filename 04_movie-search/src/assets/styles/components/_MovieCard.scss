@@ -1,0 +1,40 @@
+.card-movie {
+    @include flex-row-center;
+    border-bottom: 1.5px solid #E5E7EB;
+    max-height: 225px;
+    width: 600px;
+    padding-bottom: 1em;
+}
+
+.movie-description {
+    width: 100%;
+}
+
+.movie-poster {
+    border-radius: 2.5px;
+    margin-right: 2em;
+    height: 150px;
+    width: 100px;
+}
+
+.text-add-movies {
+    color: $clr-primary-900;
+    font-weight: $fw-bold;
+}
+
+.text-movie-title {
+    font-size: $fs-600;
+    font-weight: $fw-bold;
+    max-width: 25ch;
+}
+
+.text-movie-genre {
+    font-size: $fs-300;
+}
+
+.text-movie-plot {
+    color: $clr-neutral-400;
+    font-weight: $fw-regular;
+    line-height: 1.5;
+    max-width: 90%;
+}

@@ -32,138 +32,22 @@ nav {
    ========================================================================== */
 
 // HomeHeader
-.home-header {
-    &__container {
-        display: grid;
-        grid-template-columns: 1fr 600px 1fr;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 2.5rem;
-        max-width: 1000px;
-        padding: 0 3em;
-    }
-
-    &__logo-img{
-        flex-shrink: 0;
-        min-width: 75px;
-        max-width: 100px;
-    }
-}
-
-.search-form{
-    @include flex-row-center;
-    background-color: $clr-neutral-100;
-    border-radius: 6px;
-    width: 600px;
-    width: 100%;
-
-    &__input {
-        border: none;
-        width: 100%;
-    }
-
-    &__search-icon {
-        background: url(../images/icon-search.svg) no-repeat center;
-        height: 2rem;
-        margin: 0.5em 0.5em;
-        width: 2rem;
-    }
-
-    &__btn {
-        background-color: $clr-neutral-300;
-        border: 2px solid #D1D5DB;
-        font-size: 0.85rem;
-        padding: 1em 3em;
-        border-radius: 0 6px 6px 0;
-    }
-}
-
-.search-form__btn:hover {
-    cursor: pointer;
-    transform: scale(1.025);
-}
-
-.watchlist-nav{
-    &__container {
-    @include flex-row-center;
-    min-width: 25px;
-    gap: 0.25rem;
-    fill: $clr-neutral-200;
-    }
-
-    &__bookmark-icon {
-        min-width: 50px;
-    }
-}
+@import './components/HomeHeader';
 
 // WatchlistHeader
-.watchlist-header__container {
-    @include flex-row-center-spaced;
-    gap: 2.5rem;
-    width: 100%;
-    width: 600px;
-    padding: 0 3em;
-
-    &__logo-img {
-        min-width: 75px;
-        max-width: 100px;
-    }
-}
-
-.search-nav {
-    &__container {
-        @include flex-row-center;
-        gap: 0.5rem;
-    }
-
-    &__search-icon {
-        fill: $clr-neutral-200;
-        min-width: 25px;
-    }
-
-    &__label {
-        font-size: $fs-400;
-        font-weight: 600;
-    }
-}
+@import './components/WatchlistHeader';
 
 // Search results
-.search-results {
-    align-content: start;
-    color: $clr-neutral-900;
-    display: grid;
-    gap: 2em;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    min-height: calc(100vh - 160px);
-    padding: 5em 2em;
-}
-
+@import './components/SearchResults';
 
 // Movie card
-.card-movie {
-    @include flex-row-center;
-    border-bottom: 1.5px solid #E5E7EB;
-    max-height: 225px;
-    width: 600px;
-    padding-bottom: 1em;
-}
+@import './components/MovieCard';
 
-.movie-description {
-    width: 100%;
-}
 
 #addToListBtn {
     background: none;
     border: none;
     padding: 0;
-}
-
-.movie-poster {
-    border-radius: 2.5px;
-    margin-right: 2em;
-    height: 150px;
-    width: 100px;
 }
 
 .icon-add-watchlist {
@@ -176,35 +60,9 @@ nav {
     cursor: pointer;
 }
 
-.text-add-movies {
-    color: $clr-primary-900;
-    font-weight: $fw-bold;
-}
-
-.text-movie-title {
-    font-size: $fs-600;
-    font-weight: $fw-bold;
-    max-width: 25ch;
-}
-
-.text-movie-genre {
-    font-size: $fs-300;
-}
-
-.text-movie-plot {
-    color: $clr-neutral-400;
-    font-weight: $fw-regular;
-    line-height: 1.5;
-    max-width: 90%;
-}
-
 // Footer
-footer {
-    @include flex-row-content-center;
-    background-color: $clr-primary-900;
-    color: $clr-neutral-200;
-    height: 60px;
-}
+@import './components/_Footer';
+
 
 /* ==========================================================================
    Media queries for responsive design

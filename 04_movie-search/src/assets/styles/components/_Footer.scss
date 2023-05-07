@@ -1,0 +1,6 @@
+footer {
+    @include flex-row-content-center;
+    background-color: $clr-primary-900;
+    color: $clr-neutral-200;
+    height: 60px;
+}

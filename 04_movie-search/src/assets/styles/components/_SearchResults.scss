@@ -1,0 +1,10 @@
+.search-results {
+    align-content: start;
+    color: $clr-neutral-900;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 5em 2em;
+}

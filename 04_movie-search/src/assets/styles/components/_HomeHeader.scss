@@ -1,0 +1,63 @@
+.home-header {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 600px 1fr;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2.5rem;
+        max-width: 1000px;
+        padding: 0 3em;
+    }
+
+    &__logo-img{
+        flex-shrink: 0;
+        min-width: 75px;
+        max-width: 100px;
+    }
+}
+
+.search-form{
+    @include flex-row-center;
+    background-color: $clr-neutral-100;
+    border-radius: 6px;
+    width: 600px;
+    width: 100%;
+
+    &__input {
+        border: none;
+        width: 100%;
+    }
+
+    &__search-icon {
+        background: url(../images/icon-search.svg) no-repeat center;
+        height: 2rem;
+        margin: 0.5em 0.5em;
+        width: 2rem;
+    }
+
+    &__btn {
+        background-color: $clr-neutral-300;
+        border: 2px solid #D1D5DB;
+        font-size: 0.85rem;
+        padding: 1em 3em;
+        border-radius: 0 6px 6px 0;
+    }
+}
+
+.search-form__btn:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.watchlist-nav{
+    &__container {
+    @include flex-row-center;
+    min-width: 25px;
+    gap: 0.25rem;
+    fill: $clr-neutral-200;
+    }
+
+    &__bookmark-icon {
+        min-width: 50px;
+    }
+}
