@@ -1,7 +1,7 @@
 import ButtonAdd from "./ButtonAdd";
 import ButtonRemove from "./ButtonRemove";
 
-export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title, Metascore, Runtime, Genre, imdbID, Plot }) {
+export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title, Metascore, Year, Runtime, Genre, imdbID, Plot }) {
   function posterControl(Poster) {
     return Poster === 'N/A' ? './src/assets/images/poster-placeholder.png' : Poster;
   }
@@ -20,6 +20,7 @@ export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title,
           </div>
         </div>
         <div className="u-subheading">
+          <p className="movie-card__year">{Year}</p>
           <p className="movie-card__length">{Runtime}</p>
           <p className="movie-card__genre">{Genre}</p>
         </div>

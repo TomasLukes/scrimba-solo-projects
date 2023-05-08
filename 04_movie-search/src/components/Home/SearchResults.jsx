@@ -16,6 +16,7 @@ export default function SearchResults({ searchResults, isLoading, dataNotFound, 
       Poster={movie.Poster}
       Title={movie.Title}
       Metascore={movie.Metascore}
+      Year={movie.Year}
       Runtime={movie.Runtime}
       Genre={movie.Genre}
       Plot={movie.Plot} />
