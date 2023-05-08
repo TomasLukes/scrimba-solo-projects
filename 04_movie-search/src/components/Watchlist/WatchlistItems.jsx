@@ -13,6 +13,7 @@ export default function WatchlistItems({ savedMoviesData, savedWatchlist, update
       Poster={movie.Poster}
       Title={movie.Title}
       Metascore={movie.Metascore}
+      Year={movie.Year}
       Runtime={movie.Runtime}
       Genre={movie.Genre}
       Plot={movie.Plot} />
