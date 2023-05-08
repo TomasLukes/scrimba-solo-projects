@@ -25,11 +25,19 @@
         grid-template-columns: 1fr 1fr;
         max-width: 1200px;
     }
+
+    .watchlist__header {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 1200px) {
     .search-results {
         grid-template-columns: 1fr;
+    }
+
+    .watchlist__header {
+        grid-column: span 1;
     }
 }
 
