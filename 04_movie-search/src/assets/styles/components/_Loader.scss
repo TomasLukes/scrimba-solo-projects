@@ -17,3 +17,10 @@
       transform: rotate(360deg);
     }
   }
+
+
+  @media (max-width: 800px) {
+    .loader {
+        margin: 100px auto 0 auto;
+    }
+}

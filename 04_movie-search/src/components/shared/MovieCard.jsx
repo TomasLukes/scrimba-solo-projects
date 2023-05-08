@@ -21,7 +21,9 @@ export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title,
         </div>
         <div className="u-subheading">
           <p className="movie-card__year">{Year}</p>
+          <span> • </span>
           <p className="movie-card__length">{Runtime}</p>
+          <span> • </span>
           <p className="movie-card__genre">{Genre}</p>
         </div>
         <p className="movie-card__plot">{Plot}</p>

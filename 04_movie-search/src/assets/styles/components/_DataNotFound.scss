@@ -8,3 +8,16 @@
         font-size: $fs-600;
     }
 }
+
+@media (max-width: 800px) {
+    .data-not-found {
+        margin: 100px auto 0 auto;
+        max-width: 80%;
+
+        &__message {
+            color: $clr-neutral-400;
+            font-weight: $fw-bold;
+            font-size: $fs-600;
+        }
+    }
+}

@@ -4,6 +4,24 @@
         gap: 0.5rem;
         grid-column: span 4;
         justify-self: end;
+        align-self: end;
+
+        height: 35px;
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        border: 1px solid #F5CC00;
+
+        &:hover, :focus, :active {
+            transition: 0.2s;
+            background-color:#F5CC00;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.035);;
+        }
+    }
+
+    &__label {
+        font-size: $fs-300;
+        font-weight: $fw-bold;
     }
 
     &__btn {
@@ -14,6 +32,9 @@
 
     &__icon {
         min-width: 1.5rem;
-        padding-left: 0.25em;
     }
+}
+
+@media (max-width: 390px) {
+
 }

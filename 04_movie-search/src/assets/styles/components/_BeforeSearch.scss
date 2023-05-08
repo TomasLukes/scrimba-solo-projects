@@ -7,3 +7,9 @@
         font-size: $fs-500;
     }
 }
+
+@media (max-width: 800px) {
+    .before-search {
+        margin: 100px auto 0 auto;
+    }
+}
