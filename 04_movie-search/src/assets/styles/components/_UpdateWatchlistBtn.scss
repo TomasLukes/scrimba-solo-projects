@@ -28,6 +28,7 @@
         background: none;
         border: none;
         padding: 0;
+        cursor: pointer;
     }
 
     &__icon {
@@ -36,7 +37,7 @@
 }
 
 .btn-remove:hover {
-    border: none;
+    border: 1px solid $clr-primary-900;
     background-color: #ff0f0f;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.035);;
 }

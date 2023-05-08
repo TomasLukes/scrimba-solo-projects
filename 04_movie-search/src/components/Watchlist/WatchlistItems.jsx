@@ -21,9 +21,9 @@ export default function WatchlistItems({ savedMoviesData, savedWatchlist, update
 
   return (
     <main>
-      {!savedWatchlist.length && <EmptyWatchlist /> }
-      { savedWatchlist.length > 0 && <h2 className='watchlist__header'><span className='watchlist__header-border'>Movies in Your Watchlist</span></h2> }
       <section className="search-results" id="searchResults">
+        {!savedWatchlist.length && <EmptyWatchlist /> }
+        { savedWatchlist.length > 0 && <h2 className='watchlist__header'><span className='watchlist__header-border'>Movies in Your Watchlist</span></h2> }
         { savedWatchlist.length > 0 && movieCards }
       </section>  
     </main>

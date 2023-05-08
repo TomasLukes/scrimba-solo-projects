@@ -14,10 +14,17 @@ body {
 }
 
 nav {
-    background-color: $clr-primary-900;
-    @include flex-row-content-center;
-    min-height: 100px;
-    max-height: 200px;
+   background-color: $clr-primary-900;
+   @include flex-row-content-center;
+   height: $height-header-desktop;
+}
+
+main {
+   min-height: calc(100vh - #{$height-header-desktop} - #{$height-footer});
+}
+
+.footer {
+   height: $height-footer;
 }
 
 /* ==========================================================================
@@ -66,3 +73,12 @@ nav {
 /* ==========================================================================
    Media queries for responsive design
    ========================================================================== */
+@media (max-width: 900px) {
+   main {
+      min-height: calc(100vh - #{$height-header-mobile} - #{$height-footer});
+   }
+
+   nav {
+      height: $height-header-mobile;
+   }
+}

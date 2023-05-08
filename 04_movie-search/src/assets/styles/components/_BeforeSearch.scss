@@ -1,6 +1,7 @@
 .before-search {
     @include flex-column;
-    margin-top: 150px;
+    margin: 0 auto;
+    padding-top: 150px;
     gap: 0.75rem;
     
     &__label {
@@ -10,6 +11,6 @@
 
 @media (max-width: 800px) {
     .before-search {
-        margin: 100px auto 0 auto;
+        padding-top: 100px;
     }
 }

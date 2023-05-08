@@ -2,8 +2,9 @@
 
     &__container {
     @include flex-column;
+    grid-column: span 3;
+    padding-top: 100px;
     gap: 1rem;
-    margin-top: 150px;
     }
 
     &__heading {
