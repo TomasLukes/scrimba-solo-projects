@@ -20,7 +20,7 @@ export default function HomeHeader({ fetchMovies }) {
         <div className="home-header__container">
 
           <Link to="/">
-            <img src="./src/assets/images/logo-no-bg.svg" alt="MovieSearch logo" className="home-header__logo-img" />
+            <img src="./public/assets/images/logo-no-bg.svg" alt="MovieSearch logo" className="home-header__logo-img" />
           </Link>
 
           <form className="search-form" onSubmit={handleSearch}>
