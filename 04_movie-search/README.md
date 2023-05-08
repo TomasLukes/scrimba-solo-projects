@@ -1,10 +1,10 @@
 <p align="center">
-  <img src=".\src\assets\images\logo-no-bg.svg" alt="Project Logo" width="150" />
+  <img src="public\assets\images\logo-no-bg.svg" alt="Project Logo" width="150" />
 </p>
 
 # Movie Search App - React version
 
-After creating the same app with vanilla JS and CSS, I wanted to refactor it using React to compare the development process with and without a framework. Movie Search is an app where users can:
+After creating the same app with vanilla JS and CSS, I wanted to refactor it using React and Sass to compare the development process with and without a frameworks. Movie Search is an app where users can:
 - Search for movie titles
 - Add movies to the watchlist
 - Remove movies from the watchlist
@@ -28,7 +28,6 @@ After creating the same app with vanilla JS and CSS, I wanted to refactor it usi
 <p align="left">
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
-<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg" width="28" height="36" alt="Firebase" /></a>
 <a href="https://reactrouter.com/" target="_blank" rel="noreferrer">
   <img src="https://reactrouter.com/_brand/react-router-mark-color.svg" width="36" height="36" alt="React Router v6" /></a>
 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
@@ -36,15 +35,17 @@ After creating the same app with vanilla JS and CSS, I wanted to refactor it usi
 
 ## Screenshots
 
-![Screenshot 1](path/to/screenshot-1.png)
+<p align="center">
+  <img src="./public/assets/images/screenshots/moviesearch-screenshot-desktop.PNG" alt="Screenshot of page displayed on desktop" width="500" />
+</p>
 
-_Description of screenshot 1_
+Desktop
 
-![Screenshot 2](path/to/screenshot-2.png)
+<p align="center">
+  <img src="./public/assets/images/screenshots/moviesearch-screenshot-mobile.png" alt="Screenshot of page displayed on mobile" width="250" />
+</p>
 
-_Description of screenshot 2_
-
-<!-- Add more screenshots if necessary -->
+Mobile
 
 ## What I Learned
 
@@ -58,9 +59,8 @@ This was my first multi-page React app, where I had the opportunity to:
 
 After fully refactoring the app to React and implementing routing, I plan to continue development by:
 - ✅ Using more advanced styling techniques (BEM, Sass)
-- 👷‍♂️ Creating a more robust solution for storing the watchlist (Firebase)
-- 👷‍♂️ Adding user authentication (Firebase?)
+- ✅ Redesigne UI for better responsiveness across devices
 
 ## Last update:
 
-- 07/05/2023 - After completing the CSS refactoring, Firebase integration will be implemented.
+- 08/05/2023 - Project is mainly done for now
