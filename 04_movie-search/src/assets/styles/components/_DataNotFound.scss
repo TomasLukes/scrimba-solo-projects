@@ -11,7 +11,8 @@
 
 @media (max-width: 800px) {
     .data-not-found {
-        margin: 100px auto 0 auto;
+        margin: 0 auto;
+        padding-top: 100px;
         max-width: 80%;
 
         &__message {

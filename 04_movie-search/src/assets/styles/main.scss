@@ -81,4 +81,12 @@ main {
    nav {
       height: $height-header-mobile;
    }
+
+   .watchlist-main {
+      min-height: calc(100vh - #{$height-header-desktop} - #{$height-footer});
+   }
+
+   .watchlist-header {
+      height: $height-header-desktop;
+   }
 }

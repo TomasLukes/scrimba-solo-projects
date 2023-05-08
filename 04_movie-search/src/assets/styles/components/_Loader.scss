@@ -1,7 +1,5 @@
 .loader {
-    position: fixed;
-    top: 25%;
-    left: 50%;
+    margin: 0 auto;
     border: 4px solid #f3f3f3;
     border-top: 4px solid $clr-primary-700;
     border-radius: 50%;
@@ -9,6 +7,9 @@
     height: 75px;
     animation: spin 1s linear infinite;
 
+    &__container {
+      padding-top: 150px;
+    }
   }
   
   @keyframes spin {
@@ -19,3 +20,9 @@
       transform: rotate(360deg);
     }
   }
+
+  @media (max-width: 800px) {
+    .loader__container {
+        padding-top: 100px;
+    }
+}
