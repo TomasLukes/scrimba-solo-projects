@@ -11,8 +11,7 @@
     }
 
     &__logo-img{
-        flex-shrink: 0;
-        min-width: 75px;
+        min-width: 50px;
         max-width: 100px;
     }
 }
@@ -69,8 +68,10 @@
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .home-header__container {
+        width: auto;
+        min-width: 90%;
         padding: 0 1.5rem;
         margin: 1rem 0;
         grid-template-columns: 1fr minmax(100px, 150px) 1fr;
@@ -80,7 +81,6 @@
             "form form form";
         gap: 0.5rem;
         align-items: center;
-        width: 500px;
     }
 
     .search-form{
@@ -91,5 +91,10 @@
 
     .watchlist-nav__container {
         grid-area: link; 
+    }
+}
+
+@media (max-width: 900px) {
+    .home-header__container {
     }
 }
