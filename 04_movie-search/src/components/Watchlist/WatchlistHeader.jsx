@@ -7,7 +7,7 @@ export default function WatchlistHeader() {
       <nav>
         <div className="watchlist-header__container">
           <Link to="/">
-            <img className="watchlist-header__logo-img" src="./public/assets/images/logo-no-bg.svg" alt="MovieSearch logo" />
+            <img className="watchlist-header__logo-img" src="/assets/images/logo-no-bg.svg" alt="MovieSearch logo" />
           </Link>
 
           <Link to="/" className='search-nav__container'>
