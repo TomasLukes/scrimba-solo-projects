@@ -1,9 +1,11 @@
-.watchlist-header__container {
+.watchlist-header {
+    &__container {
     @include flex-row-center-spaced;
     gap: 2.5rem;
     width: 100%;
     max-width: 1800px;
     padding: 0 5rem;
+    }
 
     &__logo-img {
         min-width: 75px;
@@ -36,6 +38,33 @@
 
 @media (max-width: 1200px) {
     .watchlist-header__container {
+        padding: 0 2.5rem;
+    }
+}
 
+@media (max-width: 700px) {
+    .watchlist-header {
+        &__container {
+            padding: 0 1.5rem;
+        }
+
+        &__logo-img {
+            min-width: 50px;
+            max-width: 75px;
+        }
+    }
+
+    .search-nav {
+        &__container {
+            gap: 0.25rem;
+        }
+
+        &__search-icon {
+            width: 18px;
+        }
+    
+        &__label {
+            font-size: $fs-300;
+        }
     }
 }

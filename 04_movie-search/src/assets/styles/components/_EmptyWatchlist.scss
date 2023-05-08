@@ -19,3 +19,17 @@
     font-weight: $fw-bold;
     }
 }
+
+@media (max-width: 800px) {
+    .empty-watchlist {
+        &__container {
+            margin: 100px auto 0 auto;
+            max-width: 80%;
+        }
+
+        &__heading {
+            text-align: center;
+            font-size: $fs-500;
+        }
+    }
+}
