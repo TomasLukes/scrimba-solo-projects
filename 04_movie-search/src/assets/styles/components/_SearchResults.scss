@@ -3,12 +3,14 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1800px;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 200px);
     margin: 0 auto;
     padding: 3rem 3rem;
     gap: 1rem;
     color: $clr-neutral-900;
 }
+
+
 
 .watchlist__header {
     text-align: center;
