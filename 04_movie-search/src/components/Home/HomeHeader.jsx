@@ -19,9 +19,9 @@ export default function HomeHeader({ fetchMovies }) {
       <nav>
         <div className="home-header__container">
 
-          <Link to="/">
+          <a href="https://moviesearch.tomaslukes.com/">
             <img src="/assets/images/logo-no-bg.svg" alt="MovieSearch logo" className="home-header__logo-img" />
-          </Link>
+          </a>
 
           <form className="search-form" onSubmit={handleSearch}>
             <i className="search-form__search-icon"></i>
