@@ -2,6 +2,8 @@
     &__container {
         @include flex-row-center;
         gap: 0.5rem;
+        grid-column: span 4;
+        justify-self: end;
     }
 
     &__btn {

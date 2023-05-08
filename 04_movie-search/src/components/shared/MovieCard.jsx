@@ -22,14 +22,13 @@ export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title,
         <div className="u-subheading">
           <p className="movie-card__length">{Runtime}</p>
           <p className="movie-card__genre">{Genre}</p>
-          
-          {inWatchlist ? 
-            <ButtonRemove imdbID={imdbID} updateWatchlist={updateWatchlist} /> :
-            <ButtonAdd imdbID={imdbID} updateWatchlist={updateWatchlist} />
-          }
         </div>
         <p className="movie-card__plot">{Plot}</p>
       </div>
+      {inWatchlist ? 
+        <ButtonRemove imdbID={imdbID} updateWatchlist={updateWatchlist} /> :
+        <ButtonAdd imdbID={imdbID} updateWatchlist={updateWatchlist} />
+      }
     </div>
   );
 }
