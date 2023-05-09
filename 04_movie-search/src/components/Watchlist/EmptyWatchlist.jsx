@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function EmptyWatchlist() {
+  
   return (
     <div className="empty-watchlist__container">
       <p className="empty-watchlist__heading">Your watchlist is looking a little empty...</p>

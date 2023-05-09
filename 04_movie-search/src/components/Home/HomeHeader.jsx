@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 export default function HomeHeader({ fetchMovies }) {
+
   const [searchTerm, setSearchTerm] = useState('')
 
   function handleChange(e) {

@@ -3,7 +3,7 @@ const apiKey = `apikey=${import.meta.env.VITE_OMDB_API_KEY}`;
 
 export function useFetchWatchlist(savedWatchlist) {
   const [savedMoviesData, setSavedMoviesData] = useState([])
-
+  // Fetch data of movie IDs stored in watchlist from API
   useEffect(() => {
     async function fetchWatchlist() {
       try {

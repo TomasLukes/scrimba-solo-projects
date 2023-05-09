@@ -2,6 +2,7 @@ import MovieCard from '../shared/MovieCard'
 import EmptyWatchlist from './EmptyWatchlist'
 
 export default function WatchlistItems({ savedMoviesData, savedWatchlist, updateWatchlist }) {
+  
   const movieCards = savedMoviesData.map((movie) => {
     let inWatchlist = savedWatchlist.includes(movie.imdbID);
     return (

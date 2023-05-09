@@ -6,7 +6,7 @@ export function useFetchMovies() {
   const [isLoading, setIsLoading] = useState(false);
   const [dataNotFound, setDataNotFound] = useState(false);
 
-
+  // Fake delay for testing Loader when data fetching takes longer time
   function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }

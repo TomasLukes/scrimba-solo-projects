@@ -1,4 +1,5 @@
 export default function BeforeSearch() {
+  
   return (
   <div className="before-search">
     <svg width="70" height="62" viewBox="0 0 70 62" fill="none" xmlns="http://www.w3.org/2000/svg">

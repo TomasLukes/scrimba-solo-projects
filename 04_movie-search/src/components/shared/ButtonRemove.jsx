@@ -1,4 +1,5 @@
 export default function ButtonRemove({ imdbID, updateWatchlist }) {
+  
   return (
         <div className='update-watchlist-btn__container btn-remove'>
                     <label className='update-watchlist-btn__label'>Remove</label>

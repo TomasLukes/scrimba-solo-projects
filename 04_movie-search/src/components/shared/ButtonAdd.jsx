@@ -1,4 +1,5 @@
 export default function ButtonAdd({ imdbID, updateWatchlist }) {
+  
   return (
         <div className='update-watchlist-btn__container'>
           <label className='update-watchlist-btn__label'>Add</label>

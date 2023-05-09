@@ -2,6 +2,7 @@ import ButtonAdd from "./ButtonAdd";
 import ButtonRemove from "./ButtonRemove";
 
 export default function MovieCard({ inWatchlist, updateWatchlist, Poster, Title, Metascore, Year, Runtime, Genre, imdbID, Plot }) {
+
   function posterControl(Poster) {
     return Poster === 'N/A' ? '/assets/images/poster-placeholder.png' : Poster;
   }
