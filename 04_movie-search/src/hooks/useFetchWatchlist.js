@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-const apiKey = 'apikey=b9b3f97a';
+const apiKey = `apikey=${import.meta.env.VITE_OMDB_API_KEY}`;
 
 export function useFetchWatchlist(savedWatchlist) {
   const [savedMoviesData, setSavedMoviesData] = useState([])

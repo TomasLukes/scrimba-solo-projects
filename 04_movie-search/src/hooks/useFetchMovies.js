@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-const apiKey = 'apikey=b9b3f97a';
+const apiKey = `apikey=${import.meta.env.VITE_OMDB_API_KEY}`;
 
 export function useFetchMovies() {
   const [searchResults, setSearchResults] = useState([]);
