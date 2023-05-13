@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import Logo from "./Logo";
 import { categories } from "../constants/categories";
+import Slider from '@mui/material/Slider';
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
@@ -28,7 +29,19 @@ export default function StartScreen({ fetchData }) {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="numberOfQuestions">Number of Questions:</label>
-          <input type="number" name="numberOfQuestions" className="questions-input" min='5' max='20' placeholder="5" ref={numberOfQuestionsInputRef}/>
+
+          <Slider
+            name="numberOfQuestions"
+            ref={numberOfQuestionsInputRef}
+            aria-label="Default"
+            valueLabelDisplay="auto"
+            defaultValue={5}
+            min={5}
+            max={20}
+            sx={{
+              color: '#293264',
+            }}
+          />
         </div>
 
         <fieldset ref={difficultyInputRef}>
