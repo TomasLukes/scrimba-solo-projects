@@ -99,7 +99,7 @@ button:hover {
   z-index: -99;
   width: 250px;
   height: 223px;
-  background-image: url('./assets/blob-top-right.png');
+  background-image: url('../images/blob-top-right.png');
   background-position: right;
   background-repeat: no-repeat;
   top: 0;
@@ -111,7 +111,7 @@ button:hover {
   z-index: -99;
   width: 250px;
   height: 199px;
-  background-image: url('./assets/blop-bottom-left.png');
+  background-image: url('../images/blop-bottom-left.png');
   background-position: left;
   background-repeat: no-repeat;
   bottom: 0;
