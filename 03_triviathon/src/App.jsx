@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StartScreen from "./components/StartScreen";
 import QuestionsScreen from "./components/QuestionsScreen";
+import Footer from "./components/Footer";
 
 export default function App() {
   // State to store fetched questions data from API
@@ -29,6 +30,7 @@ export default function App() {
         <StartScreen fetchData={fetchData} /> :
         <QuestionsScreen questions={questions} startNewGame={startNewGame} />
       }
+      <Footer />
     </>
   )
 }

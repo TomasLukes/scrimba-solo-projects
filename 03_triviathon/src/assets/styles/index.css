@@ -10,9 +10,14 @@ h1, h2, h3, h4, h5, h6, p {
 body {
   margin: 0;
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #F5F7FB;
   color: #293264;
   font-family: 'Karla', sans-serif;
+}
+
+#root {
+  position: relative;
   display: grid;
   place-content: center;
 }
@@ -29,7 +34,8 @@ body {
   flex-direction: column;
   justify-items: center;
   align-items: flex-start;
-  margin: 3rem auto;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
 
 .container-questions-card {
@@ -114,7 +120,7 @@ button:hover {
   background-image: url('../images/blop-bottom-left.png');
   background-position: left;
   background-repeat: no-repeat;
-  bottom: 0;
+  bottom: -25px;
   left: 0;
 }
 
@@ -210,4 +216,23 @@ select {
   color: #293264;
   font-size: 1rem;
   padding: 0.125rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100vw;
+  background-color: #deebf8;
+}
+
+footer p {
+  padding: 1rem 0;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
 }
