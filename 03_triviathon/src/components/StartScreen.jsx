@@ -31,8 +31,12 @@ export default function StartScreen({ fetchData }) {
         Unleash your brain power and challenge your knowledge!
       </p>
   
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col text-left gap-2">
+      <form 
+      className="grid grid-cols-1 gap-6 bg-lightBg mt-12 py-10 px-12
+      border-solid border-16 border-selected rounded-tr-2xl rounded-bl-2xl"
+      onSubmit={handleSubmit}
+      >
+        <div className="flex flex-col text-left gap-3 ">
           <label>Number of Questions:</label>
           <Slider
             name="numberOfQuestions"
@@ -47,7 +51,7 @@ export default function StartScreen({ fetchData }) {
           />
         </div>
 
-        <div className="flex flex-col text-left gap-2">
+        <div className="flex flex-col text-left gap-3">
           <label>Select Difficulty:</label>
 
           <ToggleButtonGroup
@@ -69,7 +73,7 @@ export default function StartScreen({ fetchData }) {
           </ToggleButtonGroup>
         </div>
 
-        <div className="flex flex-col text-left gap-2">
+        <div className="flex flex-col text-left gap-3">
           <label>Select category:</label>
 
           <Autocomplete

@@ -31,6 +31,9 @@ export default {
       minHeight: {
         '100vh': '100vh',
       },
+      borderWidth: {
+        '16': '16px',
+      },
     },
   },
   plugins: [],
