@@ -1,10 +1,4 @@
 
-#root {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  min-width: 100vw;
-}
 
 .container-questions-screen {
   display: flex;
@@ -133,7 +127,6 @@ fieldset {
 .questions-input {
   margin-left: 0.75em;
   max-width: 40px;
-  font-family: 'Karla', sans-serif;
   color: #293264;
   font-size: 1rem;
   padding: 0.125rem;
@@ -144,27 +137,8 @@ fieldset {
 
 
 select {
-  font-family: 'Karla', sans-serif;
   color: #293264;
   font-size: 1rem;
   padding: 0.125rem;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100vw;
-  background-color: #deebf8;
-}
-
-footer p {
-  padding: 1rem 0;
-}
-
-footer a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 600;
-}

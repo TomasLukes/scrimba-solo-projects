@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Karla, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -550,6 +550,14 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -563,6 +571,22 @@ video {
   margin-top: 1rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -571,8 +595,16 @@ video {
   display: grid;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .w-auto {
   width: auto;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-100 {
@@ -599,6 +631,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-items-center {
   justify-items: center;
 }
@@ -620,6 +656,11 @@ video {
   background-color: rgb(77 91 158 / var(--tw-bg-opacity));
 }
 
+.bg-footerBg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 235 248 / var(--tw-bg-opacity));
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -628,11 +669,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .text-left {
@@ -653,30 +689,17 @@ video {
   line-height: 1.75rem;
 }
 
-.font-black {
-  font-weight: 900;
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
 .text-lightBg {
   --tw-text-opacity: 1;
   color: rgb(245 247 251 / var(--tw-text-opacity));
-}
-
-.text-primarydarkBlue {
-  --tw-text-opacity: 1;
-  color: rgb(41 50 100 / var(--tw-text-opacity));
 }
 
 .hover\:scale-105:hover {

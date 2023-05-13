@@ -2,6 +2,9 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    fontFamily: {
+      sans: ['Karla', 'sans-serif'],
+    },
     screens: {
       sm: '480px',
       md: '768px',
@@ -19,8 +22,14 @@ export default {
         incorrect: '#F8BCBC',
         footerBg: '#deebf8'
       },
+      minWidth: {
+        '100vw': '100vw'
+      },
       maxWidth: {
         '100': '100px',
+      },
+      minHeight: {
+        '100vh': '100vh',
       },
     },
   },
