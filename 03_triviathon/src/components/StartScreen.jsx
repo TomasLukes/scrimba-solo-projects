@@ -1,21 +1,24 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react"
+import { useState } from "react"
 import Logo from "./Logo";
 import { categories } from "../constants/categories";
-import Slider from '@mui/material/Slider';
+import { Slider, ToggleButtonGroup, ToggleButton, Autocomplete, TextField } from '@mui/material';
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
-  const numberOfQuestionsInputRef = useRef();
-  const difficultyInputRef = useRef();
-  const categoryInputRef = useRef();
+  const [numberOfQuestions, setNumberOfQuestions] = useState(5);
+  const [difficulty, setDifficulty] = useState(null);
+  const [category, setCategory] = useState(null);
 
   // When form is submited, url is created based on input values and passed to data fetching
   function handleSubmit(e) {
     e.preventDefault();
-    const numberOfQuestions = numberOfQuestionsInputRef.current.value || 5;
-    const difficulty = difficultyInputRef.current.querySelector('input:checked').value;
-    const category = categoryInputRef.current.value;
+    console.log(numberOfQuestionsSliderRef.current.value)
+    console.log(difficultyInputRef.current.value)
+    console.log(categoryInputRef.current.value)
+    const numberOfQuestions = numberOfQuestionsSliderRef.current.value || 5;
+    const difficulty = difficultyInputRef.current.getValue();
+    const category = categoryInputRef.current.getAttribute('data-value');
 
     const url = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`
     fetchData(url);
@@ -28,11 +31,9 @@ export default function StartScreen({ fetchData }) {
   
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="numberOfQuestions">Number of Questions:</label>
-
+          <label>Number of Questions:</label>
           <Slider
             name="numberOfQuestions"
-            ref={numberOfQuestionsInputRef}
             aria-label="Default"
             valueLabelDisplay="auto"
             defaultValue={5}
@@ -44,32 +45,37 @@ export default function StartScreen({ fetchData }) {
           />
         </div>
 
-        <fieldset ref={difficultyInputRef}>
-          <legend>Select Difficulty:</legend>
-        
-          <div>
-            <input type="radio" name="difficulty" id="easy" value='easy' defaultChecked/>
-            <label htmlFor="easy">Easy</label>
-          </div>
-          <div>
-            <input type="radio" name="difficulty" id="medium" value='medium'/>
-            <label htmlFor="medium">Medium</label>
-          </div>
-          <div>
-            <input type="radio" name="difficulty" id="hard" value='hard'/>
-            <label htmlFor="hard">Hard</label>
-          </div>
-        </fieldset>
+        <div className="flex flex-col text-left">
+          <label>Select Difficulty:</label>
 
-        <div className="container-select">
-          <label htmlFor="category">Select category:</label>
-          <select name="category" id="categoryDropdown" ref={categoryInputRef}>
-            {categories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-          </select>
+          <ToggleButtonGroup
+            exclusive
+            aria-label="Difficulty"
+            sx={{
+              color: '#293264',
+            }}
+          >
+            <ToggleButton value="easy" sx={{ width: '100px', color: "#293264" }}>
+              Easy
+            </ToggleButton>
+            <ToggleButton value="medium" sx={{ width: '100px', color: "#293264" }}>
+              Medium
+            </ToggleButton>
+            <ToggleButton value="hard" sx={{ width: '100px', color: "#293264" }}>
+              Hard
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </div>
+
+        <div className="flex flex-col text-left">
+          <label>Select category:</label>
+
+          <Autocomplete
+            disablePortal
+            options={categories}
+            sx={{ width: 300 }}
+            renderInput={(category) => <TextField {...category} label="Category" />}
+          />
         </div>
 
         <button type="submit" className="btn-start">Start quiz</button>
