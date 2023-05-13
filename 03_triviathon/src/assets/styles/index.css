@@ -1,32 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: #F5F7FB;
-  color: #293264;
-  font-family: 'Karla', sans-serif;
-}
 
 #root {
-  position: relative;
   display: grid;
   place-content: center;
-}
-
-.container-start-screen {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .container-questions-screen {
@@ -62,42 +39,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.text-logo {
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.text-description {
-  max-width: 30ch;
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-top: -1rem;
-}
-
 .text-results {
   font-size: 1.9rem;
-}
-
-button {
-  font-size: 1.125em;
-  font-weight: 500;
-  color: #F5F7FB;
-  background-color: #4D5B9E;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-
-  padding: 1.2rem 3.6rem;
-}
-
-button:hover {
-  scale: 0.985;
-  box-shadow: 1px 2px 2px lightgray;
-}
-
-.btn-start {
-  align-self: center;
-  margin-top: 1.25rem;
 }
 
 .blop-top-right {
@@ -196,17 +139,9 @@ fieldset {
   padding: 0.125rem;
 }
 
-.logo-img {
-  width: 100px;
-}
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: 2rem;
-  align-self: center;
-}
+
+
 
 select {
   font-family: 'Karla', sans-serif;

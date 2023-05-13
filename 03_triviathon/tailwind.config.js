@@ -18,7 +18,10 @@ export default {
         correct: '#94D7A2',
         incorrect: '#F8BCBC',
         footerBg: '#deebf8'
-      }
+      },
+      maxWidth: {
+        '100': '100px',
+      },
     },
   },
   plugins: [],

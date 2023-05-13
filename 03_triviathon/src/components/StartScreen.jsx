@@ -25,12 +25,14 @@ export default function StartScreen({ fetchData }) {
   }
 
   return (
-    <div className="container-start-screen">
+    <div className="container mx-auto grid grid-cols-1 justify-items-center">
       <Logo />
-      <p className="text-description">Unleash your brain power and challenge your knowledge!</p>
+      <p className="max-w-xs text-xl text-center">
+        Unleash your brain power and challenge your knowledge!
+      </p>
   
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="flex flex-col text-left gap-2">
           <label>Number of Questions:</label>
           <Slider
             name="numberOfQuestions"
@@ -45,7 +47,7 @@ export default function StartScreen({ fetchData }) {
           />
         </div>
 
-        <div className="flex flex-col text-left">
+        <div className="flex flex-col text-left gap-2">
           <label>Select Difficulty:</label>
 
           <ToggleButtonGroup
@@ -67,7 +69,7 @@ export default function StartScreen({ fetchData }) {
           </ToggleButtonGroup>
         </div>
 
-        <div className="flex flex-col text-left">
+        <div className="flex flex-col text-left gap-2">
           <label>Select category:</label>
 
           <Autocomplete
@@ -78,7 +80,12 @@ export default function StartScreen({ fetchData }) {
           />
         </div>
 
-        <button type="submit" className="btn-start">Start quiz</button>
+        <button
+          className="mx-auto mt-4 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+          type="submit"
+        >
+          Start quiz
+        </button>
       </form>
     </div>
   )
