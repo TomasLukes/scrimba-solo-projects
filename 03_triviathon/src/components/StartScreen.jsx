@@ -2,24 +2,17 @@
 import { useState } from "react"
 import Logo from "./Logo";
 import { categories } from "../constants/categories";
-import { Slider, ToggleButtonGroup, ToggleButton, Autocomplete, TextField } from '@mui/material';
+import { Slider, ToggleButtonGroup, ToggleButton, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
-  const [numberOfQuestions, setNumberOfQuestions] = useState(5);
-  const [difficulty, setDifficulty] = useState(null);
-  const [category, setCategory] = useState(null);
+  const [numberOfQuestions, setNumberOfQuestions] = useState(10);
+  const [difficulty, setDifficulty] = useState('easy');
+  const [category, setCategory] = useState('9');
 
   // When form is submited, url is created based on input values and passed to data fetching
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(numberOfQuestionsSliderRef.current.value)
-    console.log(difficultyInputRef.current.value)
-    console.log(categoryInputRef.current.value)
-    const numberOfQuestions = numberOfQuestionsSliderRef.current.value || 5;
-    const difficulty = difficultyInputRef.current.getValue();
-    const category = categoryInputRef.current.getAttribute('data-value');
-
     const url = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`
     fetchData(url);
   }
@@ -39,10 +32,10 @@ export default function StartScreen({ fetchData }) {
         <div className="flex flex-col text-left gap-3 ">
           <label>Number of Questions:</label>
           <Slider
-            name="numberOfQuestions"
+            value={numberOfQuestions}
+            onChange={(e, value) => setNumberOfQuestions(value)}
             aria-label="Default"
             valueLabelDisplay="auto"
-            defaultValue={5}
             min={5}
             max={20}
             sx={{
@@ -56,6 +49,8 @@ export default function StartScreen({ fetchData }) {
 
           <ToggleButtonGroup
             exclusive
+            value={difficulty}
+            onChange={(e, value) => setDifficulty(value)}
             aria-label="Difficulty"
             sx={{
               color: '#293264',
@@ -76,12 +71,30 @@ export default function StartScreen({ fetchData }) {
         <div className="flex flex-col text-left gap-3">
           <label>Select category:</label>
 
-          <Autocomplete
+          <FormControl fullWidth>
+            <InputLabel>Category</InputLabel>
+            <Select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              {categories.map(category => (
+                <MenuItem key={category.id} value={category.id}>
+                  {category.label}
+                </MenuItem>
+                )
+              )}
+            </Select>
+          </FormControl>
+
+{/*           <Autocomplete
             disablePortal
             options={categories}
+            value={category}
+            onChange={(e, value) => setCategory(value?.id)}
+            isOptionEqualToValue={(option, value) => option.id === value}
             sx={{ width: 300 }}
             renderInput={(category) => <TextField {...category} label="Category" />}
-          />
+          /> */}
         </div>
 
         <button
