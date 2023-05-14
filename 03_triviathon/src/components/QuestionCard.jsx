@@ -14,11 +14,13 @@ export default function QuestionCard({ id, question, options, answers, gameFinis
 
     // Decide what class to use based on if its selected and correct answer
     const buttonClass = 
-      `btn-answer
-      ${isSelected && 'btn-selected'}
-      ${!isSelected && gameFinished && 'btn-unselected'}
-      ${isCorrect && gameFinished && 'btn-correct'}
-      ${isSelected && !isCorrect && gameFinished && 'btn-incorrect'}`
+      ` text-sm font-semibold bg-lightBg
+        py-2 px-4 my-1 mx-1 rounded-2xl
+        border border-solid border-primarydarkBlue
+      ${isSelected && 'bg-selected'}
+      ${!isSelected && gameFinished && 'bg-selected border-0 opcaity-50'}
+      ${isCorrect && gameFinished && 'bg-correct'}
+      ${isSelected && !isCorrect && gameFinished && 'bg-incorrect'}`
  
     return <button
             className={buttonClass}
@@ -31,9 +33,16 @@ export default function QuestionCard({ id, question, options, answers, gameFinis
   })
 
   return (
-    <div className="container-questions-card">
-      <h3 className='text-question'>{correctText(question)}</h3>
+    <div className=" w-full mb-8 pb-6 border-b border-solid border-red-500">
+      <h3 className='mb-4 '>{correctText(question)}</h3>
       {optionButtons}
     </div>
   )
 }
+
+/* .container-questions-card {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #DBDEF0;
+} 
+*/

@@ -71,15 +71,22 @@ export default function QuestionsScreen({ questions, startNewGame }) {
   }
   
   return (
-    <div className="container-questions-screen">
+    <div className="container flex flex-col justify-items-center items-start mx-auto py-12 px-6">
       <Logo />
       {questionCards}
 
-      <div className="container-result">
+      <div className="flex flex-row w-full justify-between items-center">
         {gameFinished && <Result score={score} />}
         {gameFinished ? 
-          <button className="btn-check-answers" onClick={() => startNewGame()}>Play again</button> :
-          <button className="btn-check-answers" onClick={handleCheckAnswers}>Check answers</button>
+          <button 
+            className="mx-auto mt-4 mb-8 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+            onClick={() => startNewGame()}>
+              Play again
+          </button> 
+          :
+          <button 
+            className="mx-auto mt-4 mb-8 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+            onClick={handleCheckAnswers}>Check answers</button>
         }
       </div>
 

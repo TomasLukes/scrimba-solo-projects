@@ -20,7 +20,7 @@ export default function StartScreen({ fetchData }) {
   return (
     <div className="container mx-auto grid grid-cols-1 justify-items-center">
       <Logo />
-      <p className="max-w-xs text-xl text-center">
+      <p className="max-w-xs text-xl text-center ">
         Unleash your brain power and challenge your knowledge!
       </p>
   
