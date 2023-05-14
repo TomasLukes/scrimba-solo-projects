@@ -34,7 +34,7 @@ export default function QuestionCard({ id, question, options, answers, gameFinis
   })
 
   return (
-    <div className=" w-full mb-8 pb-6 border-b border-solid border-bottomBorder">
+    <div className=" w-full pb-4 border-b border-solid border-bottomBorder">
       <h3 className='mb-4 '>{correctText(question)}</h3>
       {optionButtons}
     </div>

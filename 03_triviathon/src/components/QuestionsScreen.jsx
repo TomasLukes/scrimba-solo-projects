@@ -71,7 +71,8 @@ export default function QuestionsScreen({ questions, startNewGame }) {
   }
   
   return (
-    <div className="container flex flex-col justify-items-center items-start mx-auto py-12 px-6">
+    <div className="container flex flex-col gap-8 justify-items-center items-start mx-auto py-8 px-6
+    md:max-w-4xl md:pt-16 md:pb-12">
       <Logo />
       {questionCards}
 
@@ -79,14 +80,17 @@ export default function QuestionsScreen({ questions, startNewGame }) {
         {gameFinished && <Result score={score} />}
         {gameFinished ? 
           <button 
-            className="ml-auto px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+            className="ml-auto px-10 py-4 rounded-full text-base font-medium whitespace-nowrap text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105
+            md:text-xl"
             onClick={() => startNewGame()}>
               Play again
           </button> 
           :
           <button 
-            className="mx-auto mt-4 mb-8 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
-            onClick={handleCheckAnswers}>Check answers</button>
+            className="mx-auto my-2 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+            onClick={handleCheckAnswers}>
+              Check answers
+          </button>
         }
       </div>
 

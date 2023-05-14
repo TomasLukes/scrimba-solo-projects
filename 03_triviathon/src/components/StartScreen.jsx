@@ -6,7 +6,7 @@ import { Slider, ToggleButtonGroup, ToggleButton, FormControl, Select, MenuItem 
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
-  const [numberOfQuestions, setNumberOfQuestions] = useState(10);
+  const [numberOfQuestions, setNumberOfQuestions] = useState(5);
   const [difficulty, setDifficulty] = useState('easy');
   const [category, setCategory] = useState('9');
 
@@ -18,14 +18,15 @@ export default function StartScreen({ fetchData }) {
   }
 
   return (
-    <div className="container mx-auto grid grid-cols-1 justify-items-center">
+    <div className="container mx-auto grid grid-cols-1 justify-items-center py-8
+    md:py-12">
       <Logo />
-      <p className="max-w-xs text-xl text-center ">
+      <p className="max-w-xs text-xl text-center pb-3">
         Unleash your brain power and challenge your knowledge!
       </p>
   
       <form 
-      className="grid grid-cols-1 gap-6 bg-lightBg mt-12 py-10 px-12
+      className="grid grid-cols-1 gap-6 bg-lightBg py-10 px-12 mx-4
       border-solid border-16 border-selected rounded-tr-2xl rounded-bl-2xl"
       onSubmit={handleSubmit}
       >
@@ -36,8 +37,8 @@ export default function StartScreen({ fetchData }) {
             onChange={(e, value) => setNumberOfQuestions(value)}
             aria-label="Default"
             valueLabelDisplay="auto"
-            min={5}
-            max={20}
+            min={3}
+            max={10}
             sx={{
               color: '#293264',
             }}
