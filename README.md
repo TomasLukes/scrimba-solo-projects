@@ -1,6 +1,6 @@
 # Scrimba Solo Projects
 
-This repository contains a collection of my solo front-end projects completed during the [Scrimba Frontend Path](https://scrimba.com/learn/frontend). The projects will hopefully showcase my progress and the skills I have acquired during the course.
+This repository contains a collection of my solo front-end projects from the [Scrimba Frontend Career Path](https://scrimba.com/learn/frontend), showcasing my progress and skills. For each solo project, I received a Figma file with designs and a list of functionalities to implement. I worked autonomously, added several stretch goals, and tailored the designs to suit my needs.
 
 ## Technologies Used
 
