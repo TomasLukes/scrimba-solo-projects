@@ -2,7 +2,7 @@
   <img src="public\assets\images\logo-no-bg.svg" alt="Project Logo" width="150" />
 </p>
 
-# Movie Search App - React version
+# Movie Search (React version)
 
 After creating the same app with vanilla JS and CSS, I wanted to refactor it using React and Sass to compare the development process with and without a frameworks. Movie Search is an app where users can:
 - Search for movie titles

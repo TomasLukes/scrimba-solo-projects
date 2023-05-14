@@ -7,6 +7,7 @@ import Record from './components/Record'
 import Timer from './components/Timer'
 import Result from './components/Result'
 import PlayButton from './components/PlayButton'
+import Footer from './components/Footer'
 
 export default function App() {
   const [bestRecord, setBestRecord] = useState(loadBestRecord())
@@ -119,26 +120,28 @@ export default function App() {
   )
  
   return (
-    <main className="App">
-      {/* Redner confetti when player beaten previous record */}
-      {tenzies && recordBeaten && <Confetti />}
+    <>
+      <main className="App">
+        {/* Redner confetti when player beaten previous record */}
+        {tenzies && recordBeaten && <Confetti />}
 
-      <div className='game__container'>
+        <div className='game__container'>
 
-        {!timeIsRunning ? 
-          <GameHeader/> : <Logo />
-        }
+          {!timeIsRunning ? 
+            <GameHeader/> : <Logo />
+          }
 
-        {tenzies && <Result recordBeaten={recordBeaten} /> }
-        {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
-        
-        <div className='dice'>
-          {dieElements}
+          {tenzies && <Result recordBeaten={recordBeaten} /> }
+          {timeIsRunning ? <Timer time={time} /> : <Record bestRecord={bestRecord} />}
+            
+          <div className='dice'>
+            {dieElements}
+          </div>
+
+          <PlayButton tenzies={tenzies} timeIsRunning={timeIsRunning} rollDice={rollDice} />
         </div>
-
-        <PlayButton tenzies={tenzies} timeIsRunning={timeIsRunning} rollDice={rollDice} />
-      </div>
-
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }

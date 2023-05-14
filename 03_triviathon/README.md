@@ -47,15 +47,15 @@ Desktop
 ## What I Learned
 
 Building upon my previous knowledge of React basics, I learned:
+- Using styling frameworks (Tailwind CSS, Material UI components)
 - How to work with APIs and asynchronous code within React
-- Adapting and modifying design elements from a Figma file
 - Creating and organizing larger React single-page applications
 
 ## Future Improvements
 
 After creating a minimum viable product, I aim to add stretch goals and learn new skills:
-- 👷‍♂️ Refactoring the code to be more clean and organize project structure for scalibility
-- 👷‍♂️ Styling the application using Tailwind
+- ✅  Styling the application using Tailwind
+- ✅  Using Material UI components for form
 
 ## Last update:
 

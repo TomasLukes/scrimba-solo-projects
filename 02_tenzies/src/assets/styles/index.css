@@ -252,6 +252,22 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 75px;
+    color: var(--clr-neutral-200);
+}
+
+.footer a {  
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
 
 /* ==========================================================================
    Media queries for responsive design
