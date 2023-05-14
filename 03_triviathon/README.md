@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".\src\assets\triviathon-logo-main.png" alt="Project Logo" width="150" />
+  <img src=".\public\images\triviathon-logo-main.png" alt="Project Logo" width="150" />
 </p>
 
 # Triviathon
@@ -35,7 +35,7 @@ Triviathon is a trivia question game, where users can:
 ## Screenshots
 
 <p align="center">
-  <img src="./public/images/screenshots/triviathon-screenshot-desktop.png" alt="Screenshot of page displayed on desktop" width="500" />
+  <img src="./public/images/screenshots/triviathon-screenshot-desktop.PNG" alt="Screenshot of page displayed on desktop" width="500" />
 </p>
 
 Desktop
