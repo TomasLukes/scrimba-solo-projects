@@ -23,19 +23,26 @@ Triviathon is a trivia question game, where users can:
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+<a href="https://mui.com/" target="_blank" rel="noreferrer"><img src="https://v4.material-ui.com/static/logo.png" width="36" height="36" alt="Material UI" /></a>
+</p>
+
+<p align="left">
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
+<a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
 </p>
 
 ## Screenshots
 
-![Screenshot 1](path/to/screenshot-1.png)
+<p align="center">
+  <img src="./public/images/screenshots/triviathon-screenshot-desktop.png" alt="Screenshot of page displayed on desktop" width="500" />
+</p>
 
-_Description of screenshot 1_
+Desktop
 
-![Screenshot 2](path/to/screenshot-2.png)
-
-_Description of screenshot 2_
-
-<!-- Add more screenshots if necessary -->
+<p align="center">
+  <img src="./public/images/screenshots/triviathon-screenshot-mobile.png" alt="Screenshot of page displayed on mobile" width="250" />
+</p>
 
 ## What I Learned
 
@@ -52,4 +59,4 @@ After creating a minimum viable product, I aim to add stretch goals and learn ne
 
 ## Last update:
 
-- 07/05/2023 - Project will be styled with Tailwind
+- 14/05/2023 - After implementation of Tailwind and Material UI, project is done for now

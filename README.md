@@ -13,7 +13,7 @@ This repository contains a collection of my solo front-end projects completed du
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="Tailwind CSS" />
 </a>
-
+<a href="https://mui.com/" target="_blank" rel="noreferrer"><img src="https://v4.material-ui.com/static/logo.png" width="36" height="36" alt="Material UI" /></a>
 </p>
 
 ## Tooling
@@ -21,7 +21,6 @@ This repository contains a collection of my solo front-end projects completed du
 <p align="left">
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
-<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg" width="28" height="36" alt="Firebase" /></a>
 <a href="https://reactrouter.com/" target="_blank" rel="noreferrer">
   <img src="https://reactrouter.com/_brand/react-router-mark-color.svg" width="36" height="36" alt="React Router v6" /></a>
 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
@@ -29,11 +28,12 @@ This repository contains a collection of my solo front-end projects completed du
 
 ## Projects
 
-1. [Movie App](./01_movieapp)
-2. [Tenzies](./02_tenzies)
-3. [Triviathon](./03_triviathon)
-4. [Movie App - React version](./04_movieapp-react)
+1. [Movie App](./01_movieapp) - A movie search application utilizing the OMDB API to search movie informations. Built with vanilla CSS and JavaScript. Users can add or remove movies to a watchlist, which is stored in localStorage.
 
-## License
+2. [Tenzies](./02_tenzies) - A dice game application where players compete to achieve the highest score by strategically rolling and holding dice. Developed using React, Vite, and Sass for styling. User's time is tracked, and they can compete against their personal best record.
 
-This project is licensed under the [MIT License](LICENSE).
+
+3. [Triviathon](./03_triviathon) - A trivia quiz application that fetches questions from the Open Trivia Database and allows users to test their knowledge across various categories. Created with React, Vite, Tailwind CSS for styling, and Material UI components for form.
+
+
+4. [Movie Search (React version)](./04_movieapp-search) - A refactored version of the Movie App project, implemented using React and Vite, with routing managed by React Router 6 and Sass for styling. This project demonstrates the transition from vanilla JavaScript to a popular front-end library.
