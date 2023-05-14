@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Logo from "./Logo";
 import { categories } from "../constants/categories";
-import { Slider, ToggleButtonGroup, ToggleButton, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Slider, ToggleButtonGroup, ToggleButton, FormControl, Select, MenuItem } from '@mui/material';
 
 export default function StartScreen({ fetchData }) {
   // Refs for taking value of inputs
@@ -54,15 +54,34 @@ export default function StartScreen({ fetchData }) {
             aria-label="Difficulty"
             sx={{
               color: '#293264',
+              '& .MuiToggleButton-root': {
+                width: '100px',
+                color: '#293264',
+                '&:hover': {
+                  backgroundColor: '#D6DBF5',
+                },
+                '&.Mui-selected': {
+                  backgroundColor: '#D6DBF5',
+                  '&:hover': {
+                    backgroundColor: '#D6DBF5',
+                  }
+                },
+              },
             }}
           >
-            <ToggleButton value="easy" sx={{ width: '100px', color: "#293264" }}>
+            <ToggleButton 
+              value="easy"
+            >
               Easy
             </ToggleButton>
-            <ToggleButton value="medium" sx={{ width: '100px', color: "#293264" }}>
+            <ToggleButton 
+              value="medium"
+            >
               Medium
             </ToggleButton>
-            <ToggleButton value="hard" sx={{ width: '100px', color: "#293264" }}>
+            <ToggleButton 
+              value="hard"
+            >
               Hard
             </ToggleButton>
           </ToggleButtonGroup>
@@ -72,10 +91,10 @@ export default function StartScreen({ fetchData }) {
           <label>Select category:</label>
 
           <FormControl fullWidth>
-            <InputLabel>Category</InputLabel>
             <Select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
+              variant="outlined"
             >
               {categories.map(category => (
                 <MenuItem key={category.id} value={category.id}>
@@ -85,16 +104,7 @@ export default function StartScreen({ fetchData }) {
               )}
             </Select>
           </FormControl>
-
-{/*           <Autocomplete
-            disablePortal
-            options={categories}
-            value={category}
-            onChange={(e, value) => setCategory(value?.id)}
-            isOptionEqualToValue={(option, value) => option.id === value}
-            sx={{ width: 300 }}
-            renderInput={(category) => <TextField {...category} label="Category" />}
-          /> */}
+          
         </div>
 
         <button

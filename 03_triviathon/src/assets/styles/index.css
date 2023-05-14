@@ -112,3 +112,13 @@ select {
   bottom: -25px;
   left: 0;
 }
+
+
+/* MUI select default style reset */
+.MuiOutlinedInput-notchedOutline {
+  border-color: #293264 !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #D6DBF5 !important;
+}
