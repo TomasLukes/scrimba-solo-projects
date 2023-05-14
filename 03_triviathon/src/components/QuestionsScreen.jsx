@@ -79,7 +79,7 @@ export default function QuestionsScreen({ questions, startNewGame }) {
         {gameFinished && <Result score={score} />}
         {gameFinished ? 
           <button 
-            className="mx-auto mt-4 mb-8 px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
+            className="ml-auto px-10 py-4 rounded-full text-xl font-medium text-lightBg bg-btnBg hover:drop-shadow-md hover:scale-105"
             onClick={() => startNewGame()}>
               Play again
           </button> 
