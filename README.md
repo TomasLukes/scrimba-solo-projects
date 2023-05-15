@@ -36,4 +36,4 @@ This repository contains a collection of my solo projects from the [Scrimba Fron
 3. [Triviathon](./03_triviathon) - A trivia quiz application that fetches questions from the Open Trivia Database and allows users to test their knowledge across various categories. Created with React, Vite, Tailwind CSS for styling, and Material UI components for form.
 
 
-4. [Movie Search (React version)](./04_moviea-search) - A refactored version of the Movie App project, implemented using React and Vite, with routing managed by React Router 6 and Sass for styling. This project demonstrates the transition from vanilla JavaScript to a popular front-end library.
+4. [Movie Search (React version)](./04_movie-search) - A refactored version of the Movie App project, implemented using React and Vite, with routing managed by React Router 6 and Sass for styling. This project demonstrates the transition from vanilla JavaScript to a popular front-end library.
